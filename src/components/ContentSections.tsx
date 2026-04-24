@@ -87,7 +87,7 @@ export const ContentSections = () => {
       <Section 
         title="About the Festival"
         content="The Inaugural Blackberry Festival is more than just a celebration of the harvest; it is a movement of culture, community, and connection. Hosted by the Prairie View Alumnae Chapter of Delta Sigma Theta Sorority, Inc., we invite you to experience the rich heritage of our region through the lens of one of its most beloved fruits."
-        image="https://images.unsplash.com/photo-1510629954389-c1e0da47d415?auto=format&fit=crop&w=1200&q=80"
+        image="/blackberrypie.jpeg"
         imageAlt="Fresh ripe blackberries on the bush"
         accentColor={COLORS.purple}
         bgColor="bg-white"
