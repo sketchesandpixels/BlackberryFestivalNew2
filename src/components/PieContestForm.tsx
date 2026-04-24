@@ -122,7 +122,7 @@ export const PieContestForm = () => {
         >
           <div className="relative aspect-square rounded-[10rem] overflow-hidden shadow-2xl">
             <img 
-              src="/blackberry_pie.jpeg" 
+              src="/blackberrypiecontest.jpeg" 
               alt="Blackberry Pie" 
               className="w-full h-full object-cover"
             />
