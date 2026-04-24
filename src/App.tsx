@@ -8,6 +8,7 @@ import { Hero } from "./components/Hero";
 import { PromoVideo } from "./components/PromoVideo";
 import { RegistrationForm } from "./components/RegistrationForm";
 import { PieContestForm } from "./components/PieContestForm";
+import { Sponsors } from "./components/Sponsors";
 import { ContentSections } from "./components/ContentSections";
 import { Schedule } from "./components/Schedule";
 import { Gallery } from "./components/Gallery";
@@ -27,6 +28,7 @@ export default function App() {
       <Gallery />
       <PieContestForm />
       <RegistrationForm />
+      <Sponsors />
       <NewsletterSignup />
       <Footer />
     </main>
