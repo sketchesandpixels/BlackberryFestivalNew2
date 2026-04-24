@@ -31,7 +31,7 @@ export const Hero = () => {
               className="absolute -top-12 -left-12 sm:-top-20 sm:-left-20 z-0"
             >
               <img 
-                src="/blackberries.png" 
+                src="/blackberries.jpeg" 
                 alt="Fresh Blackberries" 
                 className="w-32 sm:w-56 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-90 object-cover"
               />
