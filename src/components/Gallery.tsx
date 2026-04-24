@@ -3,20 +3,36 @@ import { COLORS } from "../constants";
 
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop",
-    alt: "better outdoor concert"
+    url: "https://images.unsplash.com/photo-1459749411177-04218006d996?w=800&auto=format&fit=crop",
+    alt: "Live local music"
   },
   {
-    url: "https://images.unsplash.com/photo-1508997449629-af0837f59798?w=800&auto=format&fit=crop",
-    alt: "food & community"
+    url: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&auto=format&fit=crop",
+    alt: "Gourmet festival food"
   },
   {
-    url: "https://images.unsplash.com/photo-1533174000253-1d53359c44ae?w=800&auto=format&fit=crop",
-    alt: "daytime vibes"
+    url: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop",
+    alt: "Summer evening vibes"
   },
   {
-    url: "https://images.unsplash.com/photo-1545696563964-b86e8ea3c483?w=800&auto=format&fit=crop",
-    alt: "carnival fun"
+    url: "https://images.unsplash.com/photo-1461696113039-4f7626966141?w=800&auto=format&fit=crop",
+    alt: "Festival night highlights"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1490424660416-359912d314b3?w=800&auto=format&fit=crop",
+    alt: "Artisan marketplace"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&auto=format&fit=crop",
+    alt: "Community harvest"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1464366400600-71ebb90ffbd4?w=800&auto=format&fit=crop",
+    alt: "Joyful celebrations"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1534432072975-bc29ac0dcf3a?w=800&auto=format&fit=crop",
+    alt: "Fresh summer berries"
   }
 ];
 
