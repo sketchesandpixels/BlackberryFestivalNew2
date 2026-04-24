@@ -31,8 +31,8 @@ const images = [
     alt: "Joyful celebrations"
   },
   {
-    url: "https://images.unsplash.com/photo-1534432072975-bc29ac0dcf3a?w=800&auto=format&fit=crop",
-    alt: "Fresh summer berries"
+    url: "https://images.unsplash.com/photo-1514733331411-968940e53a35?w=800&auto=format&fit=crop",
+    alt: "Midnight Berries"
   }
 ];
 

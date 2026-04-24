@@ -31,9 +31,9 @@ export const Hero = () => {
               className="absolute -top-12 -left-12 sm:-top-20 sm:-left-20 z-0"
             >
               <img 
-                src="https://images.unsplash.com/photo-1596485802113-14c13a0da238?w=400&auto=format&fit=crop" 
-                alt="Blackberries" 
-                className="w-24 sm:w-40 h-auto rounded-3xl rotate-12 shadow-2xl opacity-80"
+                src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" 
+                alt="Fresh Blackberries" 
+                className="w-32 sm:w-56 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-90 object-cover"
               />
             </motion.div>
 
