@@ -44,7 +44,7 @@ export const Hero = () => {
               className="absolute -bottom-10 -right-10 sm:-bottom-20 sm:-right-20 z-0"
             >
               <img 
-                src="https://images.unsplash.com/photo-1591147040212-0a755dcc9638?w=400&auto=format&fit=crop" 
+                src="/blackberrieslogo.png" 
                 alt="Golden Hour" 
                 className="w-24 sm:w-40 h-auto rounded-3xl -rotate-12 shadow-2xl opacity-80"
               />
