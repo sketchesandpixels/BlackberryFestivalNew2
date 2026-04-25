@@ -33,7 +33,7 @@ export const Hero = () => {
               <img 
                 src="/blackberries.jpeg" 
                 alt="Fresh Blackberries" 
-                className="w-32 sm:w-56 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-90 object-cover"
+                className="w-32 sm:w-56 h-auto rounded-[3rem] rotate-12 drop-shadow-xl"
               />
             </motion.div>
 
