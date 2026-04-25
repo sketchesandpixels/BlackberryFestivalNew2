@@ -70,7 +70,7 @@ export const Schedule = () => {
                 The Day's <br/> <span className="text-purple-600">Flow</span>
               </h2>
               <p className="text-slate-600 font-medium leading-relaxed mb-8">
-                Six hours of pure festival energy. Plan your day around our curated highlights and don't miss the grand fireworks finale.
+                Twelve hours of pure festival energy. Plan your day around our curated highlights.
               </p>
               <div className="h-1 w-20 bg-slate-900" />
             </motion.div>
