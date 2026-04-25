@@ -33,7 +33,7 @@ export const Hero = () => {
               <img 
                 src="/blackberries.jpeg" 
                 alt="Fresh Blackberries" 
-                className="w-32 sm:w-56 h-auto rounded-[3rem] rotate-12 drop-shadow-xl"
+                className="w-40 sm:w-72 h-auto rounded-[3rem] rotate-12 drop-shadow-2xl"
               />
             </motion.div>
 
@@ -41,12 +41,12 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.8, rotate: 15 }}
               animate={{ opacity: 1, scale: 1, rotate: 10 }}
               transition={{ duration: 1.2, type: "spring", bounce: 0.3, delay: 0.1 }}
-              className="absolute -bottom-10 -right-10 sm:-bottom-20 sm:-right-20 z-0"
+              className="absolute -bottom-10 -right-10 sm:-bottom-16 sm:-right-16 z-0"
             >
               <img 
                 src="/blackberrieslogo.png" 
                 alt="Golden Hour" 
-                className="w-24 sm:w-40 h-auto rounded-3xl -rotate-12 shadow-2xl opacity-80"
+                className="w-32 sm:w-56 h-auto rounded-3xl -rotate-12 drop-shadow-xl"
               />
             </motion.div>
 
