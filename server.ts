@@ -21,9 +21,9 @@ async function startServer() {
       return res.status(400).json({ error: "Email is required" });
     }
 
-    const apiKey = process.env.MAILCHIMP_API_KEY;
-    const serverPrefix = process.env.MAILCHIMP_SERVER_PREFIX;
-    const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
+    const 816458740443dc6eb859db6e32b201ee-us15 = process.env.MAILCHIMP_API_KEY;
+    const us15 = process.env.MAILCHIMP_SERVER_PREFIX;
+    const 191b6b9064 = process.env.MAILCHIMP_AUDIENCE_ID;
 
     if (!apiKey || !serverPrefix || !audienceId) {
       console.error("Mailchimp configuration missing");
