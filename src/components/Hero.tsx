@@ -28,7 +28,7 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               animate={{ opacity: 1, scale: 1, rotate: -2 }}
               transition={{ duration: 1, type: "spring", bounce: 0.3 }}
-              className="absolute -top-6 -left-20 sm:-top-10 sm:-left-32 z-0"
+              className="absolute -top-6 -left-22 sm:-top-12 sm:-left-32 z-0"
             >
               <img 
                 src="/blackberries.jpeg" 
