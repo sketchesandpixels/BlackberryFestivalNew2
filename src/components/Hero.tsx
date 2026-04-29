@@ -12,7 +12,7 @@ export const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="flex flex-col items-center text-center">
-         <-- <motion.div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -21,7 +21,7 @@ export const Hero = () => {
             <span className="inline-block px-6 py-2 rounded-full bg-slate-900 text-white text-xs font-black uppercase tracking-[0.3em] mb-4">
               Summer 2026 • Inaugural Event
             </span>
-          </motion.div> -->
+          </motion.div>
 
           <div className="relative mb-12">
             <motion.div
