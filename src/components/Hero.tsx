@@ -19,7 +19,7 @@ export const Hero = () => {
             className="mb-6"
           >
             <span className="inline-block px-6 py-2 rounded-full bg-slate-900 text-white text-xs font-black uppercase tracking-[0.3em] mb-4">
-              Summer 2026 • Inaugural Event
+              May 26, 2026 • Inaugural Event
             </span>
           </motion.div>
 
