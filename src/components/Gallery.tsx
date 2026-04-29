@@ -11,7 +11,7 @@ const images = [
     alt: "Gourmet festival food"
   },
   {
-    url: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop",
+    url: "/blackberry_festival_food_vibe.jpeg",
     alt: "Summer evening vibes"
   },
   {
