@@ -11,7 +11,7 @@ const images = [
     alt: "Gourmet festival food"
   },
   {
-    url: "/blackberry_festival_food_vibe.jpeg",
+    url: blackberry_festival_food_vibe.jpeg,
     alt: "Summer evening vibes"
   },
   {
