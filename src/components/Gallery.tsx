@@ -31,7 +31,7 @@ const images = [
     alt: "Joyful celebrations"
   },
   {
-    url: "https://images.unsplash.com/photo-1514733331411-968940e53a35?w=800&auto=format&fit=crop",
+    url: "Blackberry_Festival_Prairie_View.jpeg",
     alt: "Midnight Berries"
   }
 ];
