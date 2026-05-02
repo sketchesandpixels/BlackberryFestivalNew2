@@ -27,7 +27,7 @@ const images = [
     alt: "Kids Zone Games"
   },
   {
-    url: "https://images.unsplash.com/photo-1596485802113-14c13a0da238?w=800&auto=format&fit=crop",
+    url: "blackberry festival houston sea moss queen in sea moss.webp",
     alt: "Blackberry Harvest"
   },
   {
