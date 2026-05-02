@@ -15,7 +15,7 @@ const images = [
     alt: "Blackberry Wine"
   },
   {
-    url: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=800&auto=format&fit=crop",
+    url: "blackberry_festival_cobbler_large .webp",
     alt: "Famous Blackberry Pie"
   },
   {
