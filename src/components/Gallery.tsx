@@ -23,7 +23,7 @@ const images = [
     alt: "Live on Stage"
   },
   {
-    url: "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop",
+    url: "blackberry_festival_bounce_house.webp",
     alt: "Kids Zone Games"
   },
   {
