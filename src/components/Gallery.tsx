@@ -15,7 +15,7 @@ const images = [
     alt: "Summer evening vibes"
   },
   {
-    url: "https://images.unsplash.com/photo-1461696113039-4f7626966141?w=800&auto=format&fit=crop",
+    url: "blackfestival_music.png",
     alt: "Festival night highlights"
   },
   {
