@@ -41,7 +41,7 @@ export const PromoVideo = () => {
             /* --- Custom Poster & Play Button (Shows before playing) --- */
             <>
               <motion.img
-                src="https://images.unsplash.com/photo-1464366400600-71ebb90ffbd4?w=1600&auto=format&fit=crop"
+                src="blackberry festival band.jpeg"
                 alt="Video Thumbnail"
                 className="absolute inset-0 w-full h-full object-cover grayscale-[30%] blur-[2px]"
               />
