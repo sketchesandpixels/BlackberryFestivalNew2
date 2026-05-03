@@ -3,23 +3,51 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { COLORS } from "../constants";
 
 export const PieContestForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
+    setErrorMessage("");
 
-    // Simulate form submission for the demo
-    setTimeout(() => {
-      setIsLoading(false);
+    // 1. Gather the data from the form
+    const formData = new FormData(e.currentTarget);
+    
+    // We package it to match what your /api/subscribe endpoint expects!
+    const data = {
+      email: formData.get("email"),
+      contactName: formData.get("participantName"),
+      // Shoving the pie details into the 'notes' field so Mailchimp catches it
+      notes: `Pie Contest Entry: ${formData.get("dessertName")} (${formData.get("category")})`, 
+    };
+
+    try {
+      // 2. Send the real request to your Vercel backend
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit to Mailchimp");
+      }
+
+      // 3. Success! Show the confirmation screen
       setIsSubmitted(true);
-    }, 1200);
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("Failed to connect to the server. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
@@ -80,25 +108,42 @@ export const PieContestForm = () => {
             transition={{ duration: 0.6 }}
           >
             <form onSubmit={handleSubmit} className="space-y-10">
+              
+              {/* Show error message if fetch fails */}
+              {errorMessage && (
+                <div className="p-4 bg-rose-50 border border-rose-200 text-rose-700 font-medium rounded-2xl">
+                  {errorMessage}
+                </div>
+              )}
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <Label htmlFor="participantName" className="text-xs uppercase tracking-widest font-black text-slate-400">Full Name</Label>
+                  <Label htmlFor="participantName" className="text-xs uppercase tracking-widest font-black text-slate-400">Full Name *</Label>
                   <Input id="participantName" name="participantName" placeholder="Your Name" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
                 </div>
+                
+                {/* NEW EMAIL FIELD (Required for Mailchimp) */}
                 <div className="space-y-3">
-                  <Label htmlFor="dessertName" className="text-xs uppercase tracking-widest font-black text-slate-400">Dessert Name</Label>
-                  <Input id="dessertName" name="dessertName" placeholder="Grandma's Cobbler" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
+                  <Label htmlFor="email" className="text-xs uppercase tracking-widest font-black text-slate-400">Email Address *</Label>
+                  <Input id="email" type="email" name="email" placeholder="you@example.com" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <Label htmlFor="category" className="text-xs uppercase tracking-widest font-black text-slate-400">Category</Label>
-                <select id="category" name="category" required className="w-full h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus:border-rose-600 transition-all outline-none cursor-pointer font-display font-bold">
-                  <option value="">Select Category</option>
-                  <option value="Fruit Pie">Traditional Fruit Pie</option>
-                  <option value="Cobbler">Cobbler / Crisp</option>
-                  <option value="Alternative">Alternative (GF/Vegan)</option>
-                </select>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <Label htmlFor="dessertName" className="text-xs uppercase tracking-widest font-black text-slate-400">Dessert Name *</Label>
+                  <Input id="dessertName" name="dessertName" placeholder="Grandma's Cobbler" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
+                </div>
+
+                <div className="space-y-3">
+                  <Label htmlFor="category" className="text-xs uppercase tracking-widest font-black text-slate-400">Category *</Label>
+                  <select id="category" name="category" required className="w-full h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus:border-rose-600 transition-all outline-none cursor-pointer font-display font-bold">
+                    <option value="">Select Category</option>
+                    <option value="Fruit Pie">Traditional Fruit Pie</option>
+                    <option value="Cobbler">Cobbler / Crisp</option>
+                    <option value="Alternative">Alternative (GF/Vegan)</option>
+                  </select>
+                </div>
               </div>
 
               <Button 
