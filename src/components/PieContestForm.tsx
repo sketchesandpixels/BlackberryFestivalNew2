@@ -3,51 +3,23 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { COLORS } from "../constants";
 
 export const PieContestForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-    setErrorMessage("");
 
-    // 1. Gather the data from the form
-    const formData = new FormData(e.currentTarget);
-    
-    // We package it to match what your /api/subscribe endpoint expects!
-    const data = {
-      email: formData.get("email"),
-      contactName: formData.get("participantName"),
-      // Shoving the pie details into the 'notes' field so Mailchimp catches it
-      notes: `Pie Contest Entry: ${formData.get("dessertName")} (${formData.get("category")})`, 
-    };
-
-    try {
-      // 2. Send the real request to your Vercel backend
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to submit to Mailchimp");
-      }
-
-      // 3. Success! Show the confirmation screen
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      setErrorMessage("Failed to connect to the server. Please try again.");
-    } finally {
+    // Simulate form submission for the demo
+    setTimeout(() => {
       setIsLoading(false);
-    }
+      setIsSubmitted(true);
+    }, 1200);
   };
 
   if (isSubmitted) {
@@ -108,42 +80,25 @@ export const PieContestForm = () => {
             transition={{ duration: 0.6 }}
           >
             <form onSubmit={handleSubmit} className="space-y-10">
-              
-              {/* Show error message if fetch fails */}
-              {errorMessage && (
-                <div className="p-4 bg-rose-50 border border-rose-200 text-rose-700 font-medium rounded-2xl">
-                  {errorMessage}
-                </div>
-              )}
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <Label htmlFor="participantName" className="text-xs uppercase tracking-widest font-black text-slate-400">Full Name *</Label>
+                  <Label htmlFor="participantName" className="text-xs uppercase tracking-widest font-black text-slate-400">Full Name</Label>
                   <Input id="participantName" name="participantName" placeholder="Your Name" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
                 </div>
-                
-                {/* NEW EMAIL FIELD (Required for Mailchimp) */}
                 <div className="space-y-3">
-                  <Label htmlFor="email" className="text-xs uppercase tracking-widest font-black text-slate-400">Email Address *</Label>
-                  <Input id="email" type="email" name="email" placeholder="you@example.com" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
+                  <Label htmlFor="dessertName" className="text-xs uppercase tracking-widest font-black text-slate-400">Dessert Name</Label>
+                  <Input id="dessertName" name="dessertName" placeholder="Grandma's Cobbler" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-3">
-                  <Label htmlFor="dessertName" className="text-xs uppercase tracking-widest font-black text-slate-400">Dessert Name *</Label>
-                  <Input id="dessertName" name="dessertName" placeholder="Grandma's Cobbler" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
-                </div>
-
-                <div className="space-y-3">
-                  <Label htmlFor="category" className="text-xs uppercase tracking-widest font-black text-slate-400">Category *</Label>
-                  <select id="category" name="category" required className="w-full h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus:border-rose-600 transition-all outline-none cursor-pointer font-display font-bold">
-                    <option value="">Select Category</option>
-                    <option value="Fruit Pie">Traditional Fruit Pie</option>
-                    <option value="Cobbler">Cobbler / Crisp</option>
-                    <option value="Alternative">Alternative (GF/Vegan)</option>
-                  </select>
-                </div>
+              <div className="space-y-3">
+                <Label htmlFor="category" className="text-xs uppercase tracking-widest font-black text-slate-400">Category</Label>
+                <select id="category" name="category" required className="w-full h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus:border-rose-600 transition-all outline-none cursor-pointer font-display font-bold">
+                  <option value="">Select Category</option>
+                  <option value="Fruit Pie">Traditional Fruit Pie</option>
+                  <option value="Cobbler">Cobbler / Crisp</option>
+                  <option value="Alternative">Alternative (GF/Vegan)</option>
+                </select>
               </div>
 
               <Button 
@@ -167,7 +122,7 @@ export const PieContestForm = () => {
         >
           <div className="relative aspect-square rounded-[10rem] overflow-hidden shadow-2xl">
             <img 
-              src="/blackberrypiecontest.jpeg" 
+              src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1200&q=80" 
               alt="Blackberry Pie" 
               className="w-full h-full object-cover"
             />
@@ -178,6 +133,136 @@ export const PieContestForm = () => {
           </div>
         </motion.div>
 
+      </div>
+
+      {/* Rules Section */}
+      <div className="container mx-auto px-4 max-w-7xl mt-32 border-t border-slate-100 pt-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+          <span className="text-xs font-black uppercase tracking-[0.4em] text-rose-600 mb-4 block">Preparation</span>
+          <h3 className="text-5xl md:text-6xl font-display font-black text-slate-900 uppercase">Competition Rules</h3>
+          <p className="text-slate-500 mt-4 max-w-xl mx-auto font-medium">Please read the following guidelines carefully before preparing your submission for the judges.</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          {/* General Rules */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 font-black">01</div>
+              <h4 className="text-xl font-display font-black uppercase tracking-widest text-slate-900">General Rules</h4>
+            </div>
+            <ul className="space-y-6">
+              <li className="group">
+                <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-1">Entry Deadline</p>
+                <p className="text-slate-700 leading-relaxed font-medium">Pies and cobblers (blackberry only) must be delivered 1 hour prior to the contest to be considered for judging. Late entries will be disqualified.</p>
+              </li>
+              <li className="group">
+                <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-1">Anonymity</p>
+                <p className="text-slate-700 leading-relaxed font-medium">Pies and cobblers will be judged anonymously, with your name kept from the judges until after the results are in.</p>
+              </li>
+              <li className="group">
+                <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-1">Recipe Required</p>
+                <p className="text-slate-700 leading-relaxed font-medium">A recipe or ingredients list is required with the entry.</p>
+              </li>
+              <li className="group">
+                <p className="text-xs font-black uppercase tracking-widest text-rose-600 mb-1">Serving Size</p>
+                <p className="text-slate-700 leading-relaxed font-medium">Competitors must bring enough to serve the judges which can be anywhere from 4 to 11 people.</p>
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* Requirements & Judging Pies */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-black">02</div>
+              <h4 className="text-xl font-display font-black uppercase tracking-widest text-slate-900">Requirements</h4>
+            </div>
+            <div className="bg-slate-50 p-8 rounded-[3rem] border border-slate-100 mb-12">
+              <ul className="space-y-4 text-sm font-medium">
+                <li className="flex gap-3">
+                  <span className="text-purple-600">🥧</span>
+                  <span><span className="font-black uppercase tracking-tighter">Pan:</span> Pies must be baked in a 9" disposable pan.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-purple-600">🥘</span>
+                  <span><span className="font-black uppercase tracking-tighter">Bakeware:</span> Cobbler must be baked in disposable bakeware.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-purple-600">✨</span>
+                  <span><span className="font-black uppercase tracking-tighter">Homemade:</span> Entries must be made from scratch. No store-bought allowed.</span>
+                </li>
+              </ul>
+            </div>
+
+            <h4 className="text-xs font-black uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2 text-center">
+              <span className="h-px bg-slate-200 flex-1"></span>
+              Judging Criteria (Pies)
+              <span className="h-px bg-slate-200 flex-1"></span>
+            </h4>
+            <ul className="space-y-4">
+              {['Taste and Flavor', 'Crust', 'Filling', 'Appearance', 'Creativity'].map((item) => (
+                <li key={item} className="flex items-center justify-between text-slate-900 border-b border-slate-100 pb-2">
+                  <span className="font-display font-bold">{item}</span>
+                  <span className="text-[10px] uppercase font-black tracking-widest text-purple-600">Scored</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Judging Cobblers */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-black">03</div>
+              <h4 className="text-xl font-display font-black uppercase tracking-widest text-slate-900">Judging (Cobblers)</h4>
+            </div>
+            <ul className="space-y-8">
+              <li className="flex gap-6">
+                <div className="w-12 h-12 shrink-0 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-xl">👀</div>
+                <div>
+                  <h5 className="font-display font-black uppercase text-sm mb-1">Appearance</h5>
+                  <p className="text-slate-500 text-sm leading-relaxed">Judges will evaluate the overall look, neatness, and aesthetic appeal of your cobbler.</p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <div className="w-12 h-12 shrink-0 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-xl">👃</div>
+                <div>
+                  <h5 className="font-display font-black uppercase text-sm mb-1">Flavor/Aroma</h5>
+                  <p className="text-slate-500 text-sm leading-relaxed">A key factor: consideration of pleasant taste, aftertaste, and the smell.</p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <div className="w-12 h-12 shrink-0 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-xl">🦷</div>
+                <div>
+                  <h5 className="font-display font-black uppercase text-sm mb-1">Texture/Consistency</h5>
+                  <p className="text-slate-500 text-sm leading-relaxed">Judges will look for consistency in how evenly the cobbler is cooked/baked.</p>
+                </div>
+              </li>
+            </ul>
+            <div className="p-6 bg-blue-600 rounded-3xl text-white text-center shadow-xl shadow-blue-200">
+              <p className="text-xs uppercase font-black tracking-widest mb-1 opacity-80">Serving Policy</p>
+              <p className="text-sm font-medium leading-tight">Entries will not be returned and may be served to the public after judging.</p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
