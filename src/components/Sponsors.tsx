@@ -7,13 +7,9 @@ import { motion } from "motion/react";
 import { COLORS } from "../constants";
 
 const SPONSORS = [
-  "San Bernard Electric",
   "Prairie View 4B Economic Development",
   "Starbucks",
-  "Stella Rosa",
   "HEB",
-  "Blue Bell Creameries",
-  "Dr. Pepper"
 ];
 
 export const Sponsors = () => {
