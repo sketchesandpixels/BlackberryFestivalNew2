@@ -12,7 +12,7 @@ const images = [
   },
   {
     url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop",
-    alt: "Blackberry Wine"
+    alt: "Blackberry Beverage"
   },
   {
     url: "blackberrypie.webp",
@@ -27,8 +27,8 @@ const images = [
     alt: "Kids Zone Games"
   },
   {
-    url: "https://images.unsplash.com/photo-1596485802113-14c13a0da238?w=800&auto=format&fit=crop",
-    alt: "Blackberry Harvest"
+    url: "blackberry festival houston sea moss queen in sea moss.webp",
+    alt: "Blackberry Harvest Seamoss"
   },
   {
     url: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop",
