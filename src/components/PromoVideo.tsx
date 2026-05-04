@@ -63,7 +63,7 @@ export const PromoVideo = () => {
             /* --- YouTube Iframe (Shows when playing) --- */
             <iframe
               className="absolute inset-0 w-full h-full"
-              src={`https://youtu.be/nz8ihlDLlro?si=AoWGKp0lZRJM1X0Q`}
+              src={`https://www.youtube.com/watch?v=nz8ihlDLlro`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
