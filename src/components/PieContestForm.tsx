@@ -1,95 +1,15 @@
-import React, { useState } from "react";
 import { motion } from "motion/react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { COLORS } from "../constants";
 
 export const PieContestForm = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError(null);
-
-    const formData = new FormData(e.currentTarget);
-    const fullName = formData.get("participantName") as string;
-    const nameParts = fullName.split(" ");
-    const firstName = nameParts[0];
-    const lastName = nameParts.slice(1).join(" ");
-
-    const data = {
-      email: formData.get("email"),
-      firstName,
-      lastName,
-      notes: `Competition: Great Bake-off | Dessert: ${formData.get("dessertName")} | Category: ${formData.get("category")}`,
-    };
-
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setIsSubmitted(true);
-      } else {
-        setError(result.error || "Submission failed. Please try again.");
-      }
-    } catch (err) {
-      console.error("Submission error:", err);
-      setError("Something went wrong. Please check your connection.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  if (isSubmitted) {
-    return (
-      <section id="contest" className="py-24 bg-[#E5DDF0]">
-        <div className="container mx-auto px-4 max-w-2xl text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white p-16 rounded-[3rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-slate-100"
-          >
-            <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 bg-purple-100 text-purple-600 shadow-inner text-4xl">
-              🥧
-            </div>
-            <h2 className="text-4xl font-display font-black mb-4" style={{ color: COLORS.purple }}>Entry Confirmed!</h2>
-            <p className="text-xl text-slate-600 mb-10 font-medium leading-relaxed">
-              We can't wait to taste your creation! Your entry into the Inaugural Blackberry Cobbler & Pie Contest has been received. See you at the festival!
-            </p>
-            <Button 
-              onClick={() => setIsSubmitted(false)}
-              className="px-10 py-6 text-lg tracking-widest uppercase font-black shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all rounded-full"
-              style={{ backgroundColor: COLORS.purple, color: "white" }}
-            >
-              Submit Another Entry
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="contest" className="py-32 relative overflow-hidden bg-white border-t border-slate-100">
       <div className="container mx-auto px-4 max-w-7xl relative z-10 flex flex-col xl:flex-row gap-20 items-center">
         
-        {/* Left Side: Header & Form */}
+        {/* Left Side: Header & CTA */}
         <div className="flex-1 w-full max-w-2xl">
-          <div className="mb-16">
+          <div className="mb-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -111,48 +31,44 @@ export const PieContestForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-10">
-              {error && (
-                <div className="p-4 bg-rose-50 border border-rose-200 text-rose-700 font-medium rounded-2xl">
-                  {error}
-                </div>
-              )}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-3">
-                  <Label htmlFor="participantName" className="text-xs uppercase tracking-widest font-black text-slate-400">Full Name</Label>
-                  <Input id="participantName" name="participantName" placeholder="Your Name" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
-                </div>
-                <div className="space-y-3">
-                  <Label htmlFor="email" className="text-xs uppercase tracking-widest font-black text-slate-400">Email Address</Label>
-                  <Input id="email" name="email" type="email" placeholder="you@example.com" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
-                </div>
-              </div>
+            <Card className="border-none shadow-2xl rounded-[3rem] overflow-hidden bg-slate-50 border border-slate-100">
+              <CardContent className="p-8 md:p-12 text-center">
+                <div className="flex flex-col items-center">
+                  <div className="w-16 h-16 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center mb-6 shadow-inner text-3xl">
+                    🥧
+                  </div>
+                  
+                  <h3 className="text-2xl font-display font-black mb-4 text-slate-900 uppercase">Entries Now Open</h3>
+                  <p className="text-slate-600 mb-10 font-medium">
+                    Register your pie or cobbler through our secure Zeffy portal to secure your spot in the competition.
+                  </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-3">
-                  <Label htmlFor="dessertName" className="text-xs uppercase tracking-widest font-black text-slate-400">Dessert Name</Label>
-                  <Input id="dessertName" name="dessertName" placeholder="Grandma's Cobbler" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
-                </div>
-                <div className="space-y-3">
-                  <Label htmlFor="category" className="text-xs uppercase tracking-widest font-black text-slate-400">Category</Label>
-                  <select id="category" name="category" required className="w-full h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus:border-rose-600 transition-all outline-none cursor-pointer font-display font-bold">
-                    <option value="">Select Category</option>
-                    <option value="Fruit Pie">Traditional Fruit Pie</option>
-                    <option value="Cobbler">Cobbler / Crisp</option>
-                    <option value="Alternative">Alternative (GF/Vegan)</option>
-                  </select>
-                </div>
-              </div>
+                  <div className="grid grid-cols-2 gap-3 w-full mb-10">
+                     {["Fruit Pie", "Cobbler/Crisp", "Traditional", "Creative"].map((type) => (
+                       <div key={type} className="bg-white p-3 rounded-xl border border-slate-200 text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center justify-center">
+                         {type}
+                       </div>
+                     ))}
+                  </div>
 
-              <Button 
-                type="submit" 
-                disabled={isLoading}
-                className="w-full h-20 text-xl tracking-[0.2em] uppercase font-black shadow-2xl hover:-translate-y-1 transition-all disabled:opacity-70 rounded-full"
-                style={{ backgroundColor: COLORS.purple, color: "white" }}
-              >
-                {isLoading ? "Submitting..." : "Enter Competition"}
-              </Button>
-            </form>
+                  <motion.a 
+                    href="https://www.zeffy.com/en-US/ticketing/blackberry-festival-pie-competition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-10 h-18 text-lg tracking-widest uppercase font-black shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all rounded-full w-full"
+                    style={{ backgroundColor: COLORS.purple, color: "white" }}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    Enter Competition
+                  </motion.a>
+                  
+                  <p className="mt-6 text-slate-400 text-[10px] uppercase tracking-widest font-bold">
+                    Secure checkout powered by Zeffy
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
 
@@ -165,7 +81,7 @@ export const PieContestForm = () => {
         >
           <div className="relative aspect-square rounded-[10rem] overflow-hidden shadow-2xl">
             <img 
-              src="blackberrypiecontest.webp" 
+              src="https://images.unsplash.com/photo-1616031037011-087000171abe?auto=format&fit=crop&w=1200&q=80" 
               alt="Blackberry Pie" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
