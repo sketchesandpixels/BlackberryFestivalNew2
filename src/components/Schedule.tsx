@@ -23,7 +23,7 @@ const SCHEDULE_DATA = [
     time: "1:00 PM",
     title: "Live Local Bands (Brown Sugar Band)",
     location: "Main Stage",
-    description: "Grab a spot on the grass and enjoy acoustic sets and local indie talent.",
+    description: "Grab a spot on the grass and enjoy acoustic sets and local talent.",
     icon: Music,
     color: "#eab308" // yellow-500
   },
