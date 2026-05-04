@@ -89,7 +89,7 @@ export const Hero = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="text-xl md:text-2xl text-slate-600 font-medium max-w-3xl mb-12 leading-relaxed"
           >
-            Where culture meets the harvest. Join the <span className="font-bold text-slate-900 underline decoration-yellow-400 decoration-4 underline-offset-4">Delta Sigma Theta Sorority, Inc. Prairie View Alumnae Chapter</span> for a day of music, heritage, and the sweetest berries of the season.
+            Where culture meets the harvest. Join the <span className="font-bold text-slate-900 underline decoration-yellow-400 decoration-4 underline-offset-4">Prairie View Alumnae Chapter, Delta Sigma Theta Sorority, Inc. </span> for a day of music, heritage, and the sweetest berries of the season.
           </motion.p>
 
           <motion.div
