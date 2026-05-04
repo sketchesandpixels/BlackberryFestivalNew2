@@ -99,7 +99,7 @@ export const ContentSections = () => {
       <Section 
         title="Vibes & Heritage"
         content="From the rhythmic beats of live local bands to the competitive spirit of our famous Pie Contest, every moment is curated to spark joy. Wander through our artisan marketplace, indulge in gourmet food trucks, and create lasting memories with the whole family in our dedicated fun zones."
-        image="/blackberry-crowd.jpeg"
+        image="/blackberry-crowd.webp"
         imageAlt="Festival crowd"
         reverse={true}
         accentColor={COLORS.crimson}

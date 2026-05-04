@@ -31,7 +31,7 @@ export const Hero = () => {
               className="absolute -top-12 -left-32 sm:-top-16 sm:-left-55"
             >
               <img 
-                src="/blackberries.jpeg" 
+                src="/blackberries.webp" 
                 alt="Fresh Blackberries" 
                 className="w-40 sm:w-72 h-auto rounded-[3rem] rotate-12 drop-shadow-2xl"
               />
@@ -44,7 +44,7 @@ export const Hero = () => {
               className="absolute -bottom-16 -right-24 sm:-bottom-10 sm:-right-44"
             >
               <img 
-                src="/blackberrieslogo.jpeg" 
+                src="/blackberrieslogo.webp" 
                 alt="Golden Hour" 
                 className="w-32 sm:w-56 h-auto rounded-3xl -rotate-12 drop-shadow-xl"
               />

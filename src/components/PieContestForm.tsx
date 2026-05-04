@@ -151,7 +151,7 @@ export const PieContestForm = () => {
         >
           <div className="relative aspect-square rounded-[10rem] overflow-hidden shadow-2xl">
             <img 
-              src="blackberrypiecontest.jpeg" 
+              src="blackberrypiecontest.webp" 
               alt="Blackberry Pie" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
