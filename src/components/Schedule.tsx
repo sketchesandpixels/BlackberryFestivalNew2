@@ -21,9 +21,9 @@ const SCHEDULE_DATA = [
   },
   {
     time: "1:00 PM",
-    title: "Live Local Bands (Brown Sugar Band)",
+    title: "Local High School(s) Entertainment",
     location: "Main Stage",
-    description: "Grab a spot on the grass and enjoy acoustic sets and local talent.",
+    description: "Grab a spot on the grass and enjoy local talent.",
     icon: Music,
     color: "#eab308" // yellow-500
   },
@@ -37,17 +37,17 @@ const SCHEDULE_DATA = [
   },
   {
     time: "5:30 PM",
-    title: "B.I.G. Headline Concert & Vibes",
+    title: "Brown Sugar Concert & Vibes",
     location: "Main Stage",
     description: "The energy goes up as our evening headliners take the stage.",
     icon: Music,
     color: COLORS.purple
   },
   {
-    time: "10:00 PM",
-    title: "Festival Close",
-    location: "The Grand Lawn",
-    description: "B.I.G live band to conclude the inaugural celebration.",
+    time: "8:00 - 10:00 PM",
+    title: "B.I.G. Headline Concert & Vibes",
+    location: "Main Stage",
+    description: "B.I.G is the live high energy bands headlines and closes the Inaugural Blackberry Festival..",
     icon: Star,
     color: COLORS.crimson
   }
