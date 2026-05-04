@@ -21,33 +21,33 @@ const SCHEDULE_DATA = [
   },
   {
     time: "1:00 PM",
-    title: "Live Local Bands (Brown Sugar)",
+    title: "Live Local Bands (Opening Acts)",
     location: "Main Stage",
-    description: "Grab a spot on the grass and enjoy acoustic sets and local talent.",
+    description: "Grab a spot on the grass and enjoy acoustic sets and local indie talent.",
     icon: Music,
     color: "#eab308" // yellow-500
   },
   {
     time: "3:00 PM",
-    title: "Family Fun & Large Size Games",
+    title: "Family Fun & Carnival Rides",
     location: "The Kids Zone",
-    description: "Bounce House, and games for the whole family.",
+    description: "Ferris wheels, face painting, and games for the whole family.",
     icon: Ticket,
     color: "#3b82f6" // blue-500
   },
   {
     time: "5:30 PM",
-    title: "Headline Concert & Vibes, (B.I.G.)"
+    title: "Headline Concert & Vibes",
     location: "Main Stage",
     description: "The energy goes up as our evening headliners take the stage.",
     icon: Music,
     color: COLORS.purple
   },
   {
-    time: "10:00 PM",
-    title: "Festival Close",
+    time: "8:00 PM",
+    title: "Fireworks & Festival Close",
     location: "The Grand Lawn",
-    description: "Live music concert to conclude the inaugural celebration.  We will see you in 2027",
+    description: "A spectacular fireworks show to conclude the inaugural celebration.",
     icon: Star,
     color: COLORS.crimson
   }
@@ -70,7 +70,7 @@ export const Schedule = () => {
                 The Day's <br/> <span className="text-purple-600">Flow</span>
               </h2>
               <p className="text-slate-600 font-medium leading-relaxed mb-8">
-                Twelve hours of pure festival energy. Plan your day around our curated highlights.
+                Six hours of pure festival energy. Plan your day around our curated highlights and don't miss the grand fireworks finale.
               </p>
               <div className="h-1 w-20 bg-slate-900" />
             </motion.div>
