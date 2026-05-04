@@ -10,16 +10,24 @@ import { COLORS } from "../constants";
 export const PieContestForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
+    setError(null);
 
     const formData = new FormData(e.currentTarget);
+    const fullName = formData.get("participantName") as string;
+    const nameParts = fullName.split(" ");
+    const firstName = nameParts[0];
+    const lastName = nameParts.slice(1).join(" ");
+
     const data = {
       email: formData.get("email"),
-      firstName: formData.get("participantName"),
-      notes: `Dessert: ${formData.get("dessertName")} | Category: ${formData.get("category")}`,
+      firstName,
+      lastName,
+      notes: `Competition: Great Bake-off | Dessert: ${formData.get("dessertName")} | Category: ${formData.get("category")}`,
     };
 
     try {
@@ -31,15 +39,16 @@ export const PieContestForm = () => {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         setIsSubmitted(true);
       } else {
-        const errorData = await response.json();
-        alert(errorData.error || "Submission failed. Please try again.");
+        setError(result.error || "Submission failed. Please try again.");
       }
-    } catch (error) {
-      console.error("Submission error:", error);
-      alert("Something went wrong. Please check your connection.");
+    } catch (err) {
+      console.error("Submission error:", err);
+      setError("Something went wrong. Please check your connection.");
     } finally {
       setIsLoading(false);
     }
@@ -103,6 +112,11 @@ export const PieContestForm = () => {
             transition={{ duration: 0.6 }}
           >
             <form onSubmit={handleSubmit} className="space-y-10">
+              {error && (
+                <div className="p-4 bg-rose-50 border border-rose-200 text-rose-700 font-medium rounded-2xl">
+                  {error}
+                </div>
+              )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-3">
                   <Label htmlFor="participantName" className="text-xs uppercase tracking-widest font-black text-slate-400">Full Name</Label>
@@ -151,7 +165,7 @@ export const PieContestForm = () => {
         >
           <div className="relative aspect-square rounded-[10rem] overflow-hidden shadow-2xl">
             <img 
-              src="blackberrypiecontest.webp" 
+              src="https://images.unsplash.com/photo-1616031037011-087000171abe?auto=format&fit=crop&w=1200&q=80" 
               alt="Blackberry Pie" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
