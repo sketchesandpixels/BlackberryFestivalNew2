@@ -61,15 +61,16 @@ export const PromoVideo = () => {
             </>
           ) : (
             /* --- YouTube Iframe (Shows when playing) --- */
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src={`https://youtu.be/nz8ihlDLlro?si=JV1iJ2WC8qKXSGz7`}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+            {/* --- YouTube Iframe (Shows when playing) --- */}
+<iframe
+  className="absolute inset-0 w-full h-full"
+  src="https://www.youtube.com/embed/nz8ihlDLlro" // 
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+></iframe>
           )}
         </motion.div>
       </div>
