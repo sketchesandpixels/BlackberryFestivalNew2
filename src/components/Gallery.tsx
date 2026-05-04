@@ -12,10 +12,10 @@ const images = [
   },
   {
     url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop",
-    alt: "Blackberry Beverages"
+    alt: "Blackberry Wine"
   },
   {
-    url: "blackberry_festival_cobbler_large .webp",
+    url: "https://images.unsplash.com/photo-1616031037011-087000171abe?w=800&auto=format&fit=crop",
     alt: "Famous Blackberry Pie"
   },
   {
@@ -23,11 +23,11 @@ const images = [
     alt: "Live on Stage"
   },
   {
-    url: "blackberry_festival_bounce_house.webp",
+    url: "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop",
     alt: "Kids Zone Games"
   },
   {
-    url: "blackberry festival houston sea moss queen in sea moss.webp",
+    url: "https://images.unsplash.com/photo-1596485802113-14c13a0da238?w=800&auto=format&fit=crop",
     alt: "Blackberry Harvest"
   },
   {
@@ -68,30 +68,51 @@ export const Gallery = () => {
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover="hover"
+              whileTap="tap"
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}
-              className={`group relative overflow-hidden transition-all duration-500 hover:z-20
+              className={`group relative overflow-hidden transition-all duration-500 flex items-center justify-center
                 ${idx % 3 === 0 ? 'aspect-square md:col-span-2' : 'aspect-[3/4]'}
                 ${idx % 2 === 0 ? 'md:mt-12' : ''}
               `}
             >
-              <div className="w-full h-full relative overflow-hidden p-2 bg-white shadow-xl transform transition-transform duration-500 group-hover:-rotate-2 group-hover:scale-105 border border-slate-100">
-                <img
+              <motion.div 
+                variants={{
+                  hover: { rotate: -2, scale: 1.05 },
+                  tap: { rotate: -1, scale: 0.98 }
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="w-full h-full relative overflow-hidden p-2 bg-white shadow-xl border border-slate-100"
+              >
+                <motion.img
+                  variants={{
+                    hover: { filter: 'grayscale(0)' },
+                    tap: { filter: 'grayscale(0)' }
+                  }}
+                  initial={{ filter: 'grayscale(1)' }}
                   src={img.url}
                   alt={img.alt}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                 />
-                <div className="absolute bottom-6 left-6 right-6">
+                <motion.div 
+                  variants={{
+                    hover: { y: 0, opacity: 1 },
+                    tap: { y: 0, opacity: 1 }
+                  }}
+                  initial={{ y: 10, opacity: 0.8 }}
+                  className="absolute bottom-6 left-6 right-6"
+                >
                   <span 
                     className="inline-block px-3 py-1 text-[10px] font-black uppercase tracking-widest text-white shadow-lg"
                     style={{ backgroundColor: COLORS.purple }}
                   >
                     {img.alt}
                   </span>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
