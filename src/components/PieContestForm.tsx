@@ -126,7 +126,7 @@ export const PieContestForm = () => {
               src="blackberrype.jpeg" 
               alt="BlackberryFestival Pie" 
 =======
-              src="public/blackberrypiecontest.jpeg" 
+              src="blackberrypiecontest.jpeg" 
               alt="Blackberry Pie" 
 >>>>>>> 8c7026bb438111868208c91daa7ea36682156238
               className="w-full h-full object-cover"
