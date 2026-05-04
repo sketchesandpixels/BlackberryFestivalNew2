@@ -37,7 +37,7 @@ const SCHEDULE_DATA = [
   },
   {
     time: "5:30 PM",
-    title: "Headline Concert & Vibes, (Opening Act)"
+    title: "Headline Concert & Vibes, (B.I.G.)"
     location: "Main Stage",
     description: "The energy goes up as our evening headliners take the stage.",
     icon: Music,
