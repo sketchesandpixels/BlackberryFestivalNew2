@@ -15,11 +15,34 @@ export const PieContestForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate form submission for the demo
-    setTimeout(() => {
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      email: formData.get("email"),
+      firstName: formData.get("participantName"),
+      notes: `Dessert: ${formData.get("dessertName")} | Category: ${formData.get("category")}`,
+    };
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        const errorData = await response.json();
+        alert(errorData.error || "Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Something went wrong. Please check your connection.");
+    } finally {
       setIsLoading(false);
-      setIsSubmitted(true);
-    }, 1200);
+    }
   };
 
   if (isSubmitted) {
@@ -86,19 +109,25 @@ export const PieContestForm = () => {
                   <Input id="participantName" name="participantName" placeholder="Your Name" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
                 </div>
                 <div className="space-y-3">
-                  <Label htmlFor="dessertName" className="text-xs uppercase tracking-widest font-black text-slate-400">Dessert Name</Label>
-                  <Input id="dessertName" name="dessertName" placeholder="Grandma's Cobbler" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
+                  <Label htmlFor="email" className="text-xs uppercase tracking-widest font-black text-slate-400">Email Address</Label>
+                  <Input id="email" name="email" type="email" placeholder="you@example.com" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <Label htmlFor="category" className="text-xs uppercase tracking-widest font-black text-slate-400">Category</Label>
-                <select id="category" name="category" required className="w-full h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus:border-rose-600 transition-all outline-none cursor-pointer font-display font-bold">
-                  <option value="">Select Category</option>
-                  <option value="Fruit Pie">Traditional Fruit Pie</option>
-                  <option value="Cobbler">Cobbler / Crisp</option>
-                  <option value="Alternative">Alternative (GF/Vegan)</option>
-                </select>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <Label htmlFor="dessertName" className="text-xs uppercase tracking-widest font-black text-slate-400">Dessert Name</Label>
+                  <Input id="dessertName" name="dessertName" placeholder="Grandma's Cobbler" required className="h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus-visible:border-rose-600 focus-visible:ring-0 px-0 placeholder:text-slate-300 font-display font-bold" />
+                </div>
+                <div className="space-y-3">
+                  <Label htmlFor="category" className="text-xs uppercase tracking-widest font-black text-slate-400">Category</Label>
+                  <select id="category" name="category" required className="w-full h-16 text-lg border-x-0 border-t-0 border-b-2 border-slate-200 rounded-none bg-transparent focus:border-rose-600 transition-all outline-none cursor-pointer font-display font-bold">
+                    <option value="">Select Category</option>
+                    <option value="Fruit Pie">Traditional Fruit Pie</option>
+                    <option value="Cobbler">Cobbler / Crisp</option>
+                    <option value="Alternative">Alternative (GF/Vegan)</option>
+                  </select>
+                </div>
               </div>
 
               <Button 
@@ -122,16 +151,11 @@ export const PieContestForm = () => {
         >
           <div className="relative aspect-square rounded-[10rem] overflow-hidden shadow-2xl">
             <img 
-<<<<<<< HEAD
-              src="blackberrype.jpeg" 
-              alt="BlackberryFestival Pie" 
-=======
-              src="blackberrypiecontest.jpeg" 
+              src="https://images.unsplash.com/photo-1616031037011-087000171abe?auto=format&fit=crop&w=1200&q=80" 
               alt="Blackberry Pie" 
->>>>>>> 8c7026bb438111868208c91daa7ea36682156238
               className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-slate-900/10 mix-blend-overlay"></div>
           </div>
           <div className="absolute -bottom-10 -right-10 bg-rose-600 text-white p-12 rounded-full w-48 h-48 flex items-center justify-center text-center font-display font-black uppercase text-xl leading-none shadow-xl transform rotate-12">
             Win a<br/>Blue<br/>Ribbon
