@@ -21,33 +21,33 @@ const SCHEDULE_DATA = [
   },
   {
     time: "1:00 PM",
-    title: "Live Local Bands (Opening Acts)",
+    title: "Live Local Bands (Brown Sugar)",
     location: "Main Stage",
-    description: "Grab a spot on the grass and enjoy acoustic sets and local indie talent.",
+    description: "Grab a spot on the grass and enjoy acoustic sets and local talent.",
     icon: Music,
     color: "#eab308" // yellow-500
   },
   {
     time: "3:00 PM",
-    title: "Family Fun & Carnival Rides",
+    title: "Family Fun & Large Size Games",
     location: "The Kids Zone",
-    description: "Ferris wheels, face painting, and games for the whole family.",
+    description: "Bounce House, and games for the whole family.",
     icon: Ticket,
     color: "#3b82f6" // blue-500
   },
   {
     time: "5:30 PM",
-    title: "Headline Concert & Vibes",
+    title: "Headline Concert & Vibes, (Opening Act)"
     location: "Main Stage",
     description: "The energy goes up as our evening headliners take the stage.",
     icon: Music,
     color: COLORS.purple
   },
   {
-    time: "8:00 PM",
-    title: "Fireworks & Festival Close",
+    time: "10:00 PM",
+    title: "Festival Close",
     location: "The Grand Lawn",
-    description: "A spectacular fireworks show to conclude the inaugural celebration.",
+    description: "Live music concert to conclude the inaugural celebration.  We will see you in 2027",
     icon: Star,
     color: COLORS.crimson
   }
