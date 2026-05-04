@@ -52,7 +52,7 @@ export const PieContestForm = () => {
                   </div>
 
                   <motion.a 
-                    href="https://www.zeffy.com/en-US/ticketing/blackberry-festival-pie-competition"
+                    href="https://www.zeffy.com/en-US/ticketing/inaugural-blackberry-festival"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-10 h-18 text-lg tracking-widest uppercase font-black shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all rounded-full w-full"
