@@ -1,8 +1,13 @@
 import { COLORS } from "../constants";
 import { Facebook, Twitter, Instagram } from 'lucide-react';
 
-export const Footer = () => {
-  const shareUrl = "https://blackberryfestivalpraireview.com";
+interface FooterProps {
+  onOpenContact?: () => void;
+  onOpenPrivacy?: () => void;
+}
+
+export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
+  const shareUrl = "https://blackberryfestivalprairieview.com";
   
   return (
     <footer className="py-32 bg-white text-slate-900 relative overflow-hidden border-t border-slate-100">
@@ -15,7 +20,7 @@ export const Footer = () => {
               <span className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter -mt-2" style={{ color: COLORS.crimson }}>Festival</span>
               <span className="text-xl font-display font-black tracking-[0.5em] mt-2 opacity-20">2026</span>
             </div>
-            <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 block mt-4">Hosted by Delta Sigma Theta Sorority, Inc.</span>
+            <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 block mt-4">Hosted by Prairie View Alumnae Chapter of Delta Sigma Theta Sorority, Inc.</span>
           </div>
           
           <div className="flex items-center justify-center gap-12 mb-16">
@@ -30,8 +35,18 @@ export const Footer = () => {
              © 2026 PVAC • Prairie View Alumnae Chapter
           </p>
           <div className="flex gap-10">
-             <a href="#" className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-slate-900 transition-colors">Privacy Policy</a>
-             <a href="#" className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-slate-900 transition-colors">Contact Us</a>
+             <button 
+               onClick={(e) => { e.preventDefault(); onOpenPrivacy?.(); }}
+               className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-slate-900 transition-colors cursor-pointer outline-none"
+             >
+               Privacy Policy
+             </button>
+             <button 
+               onClick={(e) => { e.preventDefault(); onOpenContact?.(); }}
+               className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-slate-900 transition-colors cursor-pointer outline-none"
+             >
+               Contact Us
+             </button>
           </div>
         </div>
       </div>
