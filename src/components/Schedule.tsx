@@ -47,7 +47,7 @@ const SCHEDULE_DATA = [
     time: "8:00 - 10:00 PM",
     title: "B.I.G. Headline Concert & Vibes",
     location: "Main Stage",
-    description: "B.I.G is the live high energy bands headlines and closes the Inaugural Blackberry Festival..",
+    description: "B.I.G. is the live, high energy, headliner and closes the Inaugural Blackberry Festival.",
     icon: Star,
     color: COLORS.crimson
   }
