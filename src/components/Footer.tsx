@@ -24,9 +24,7 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
           </div>
           
           <div className="flex items-center justify-center gap-12 mb-16">
-             <a href="#" className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors">Instagram</a>
-             <a href="#" className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors">Facebook</a>
-             <a href="#" className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors">Twitter</a>
+             <a href="https://www.facebook.com/profile.php?id=61589187458775" className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors">Facebook</a>
           </div>
         </div>
 
