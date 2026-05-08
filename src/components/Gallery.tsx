@@ -11,7 +11,7 @@ const images = [
     alt: "Street Tacos"
   },
   {
-    url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop",
+    url: "blackberry_beverages.webp",
     alt: "Blackberry Beverages"
   },
   {
