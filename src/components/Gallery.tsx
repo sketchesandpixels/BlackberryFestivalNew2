@@ -12,7 +12,7 @@ const images = [
   },
   {
     url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop",
-    alt: "Blackberry Beverage"
+    alt: "Blackberry Beverages"
   },
   {
     url: "blackberrypie.webp",
