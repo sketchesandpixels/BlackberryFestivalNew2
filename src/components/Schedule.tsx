@@ -37,7 +37,7 @@ const SCHEDULE_DATA = [
   },
   {
     time: "5:30 PM",
-    title: "Brown Sugar Concert & Vibes",
+    title: "Brown Sugar Band & Vibes",
     location: "Main Stage",
     description: "The energy goes up as our evening headliners take the stage.",
     icon: Music,
@@ -45,7 +45,7 @@ const SCHEDULE_DATA = [
   },
   {
     time: "8:00 - 10:00 PM",
-    title: "B.I.G. Headline Concert & Vibes",
+    title: "B.I.G. Headline Band & Vibes",
     location: "Main Stage",
     description: "B.I.G. is the live, high energy, headliner and closes the Inaugural Blackberry Festival.",
     icon: Star,
