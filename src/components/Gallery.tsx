@@ -54,7 +54,7 @@ export const Gallery = () => {
             className="bg-rose-600 text-white px-8 py-4 mb-4 transform -rotate-2 shadow-2xl"
           >
             <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter leading-none">
-              Food, Drinks & Fun
+              Food, Beverages & Fun
             </h2>
           </motion.div>
           <p className="text-xl font-display font-black uppercase tracking-widest text-slate-400">
