@@ -11,7 +11,7 @@ const images = [
     alt: "Street Tacos"
   },
   {
-    url: "blackberry_beverages.webp",
+    url: "blackberry_festival_beverages_.webp",
     alt: "Blackberry Beverages"
   },
   {
