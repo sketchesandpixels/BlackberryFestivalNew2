@@ -69,7 +69,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                     <div>
                       <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Email Us</p>
                       <a href="mailto:info@blackberryfestivalprairieview.com" className="text-xl md:text-2xl font-display font-bold text-slate-900 hover:text-purple-600 transition-colors break-all">
-                        info@blackberryfestivalprairieview.com
+                        fun@blackberryfestivalprairieview.com
                       </a>
                     </div>
                   </div>
