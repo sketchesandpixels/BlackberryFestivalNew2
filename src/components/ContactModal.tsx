@@ -82,7 +82,6 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                       <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Location</p>
                       <p className="text-xl md:text-2xl font-display font-bold text-slate-900">
                         44500 US Business Prairie View, Texas 77484<br/>
-                        Blackberry Festival Grounds
                       </p>
                     </div>
                   </div>
