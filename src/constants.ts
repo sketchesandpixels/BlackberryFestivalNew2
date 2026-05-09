@@ -15,7 +15,7 @@ export const FESTIVAL_INFO = {
   established: "Est. 1952",
   date: "May 16, 2026",
   time: "10:00 AM - 10:00 PM",
-  location: "44500 US Business, Prairie View, TX 7784 ",
+  location: "44500 US Business 290, Prairie View, TX 7784 ",
   description: "Join us for the Inaugural Blackberry Festival! Hosted by the Prairie View Alumnae Chapter of Delta Sigma Theta Sorority, Inc. Celebrate community, culture, and all things blackberry with food, vendors, music, and family fun.",
   highlights: "Live Music, Local Vendors, Food Trucks, Family Activities, and more!",
 };
