@@ -125,7 +125,7 @@ export const Hero = () => {
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           className="text-6xl font-display font-black uppercase tracking-[0.5em]"
         >
-          PVAC DELTA SIGMA THETA • BLACKBERRY FESTIVAL 2026 • PVAC DELTA SIGMA THETA • BLACKBERRY FESTIVAL 2026 • PVAC DELTA SIGMA THETA • BLACKBERRY FESTIVAL 2026
+        • BLACKBERRY FESTIVAL 2026 • BLACKBERRY FESTIVAL 2026  • BLACKBERRY FESTIVAL 2026
         </motion.div>
       </div>
     </section>
