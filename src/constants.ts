@@ -11,7 +11,7 @@ export const COLORS = {
 
 export const FESTIVAL_INFO = {
   title: "Inaugural Blackberry Festival 2026",
-  host: "Delta Sigma Theta Sorority, Inc. - Prairie View Alumnae Chapter",
+  host: "Blackberry Festival",
   established: "Est. 1952",
   date: "May 16, 2026",
   time: "10:00 AM - 10:00 PM",
