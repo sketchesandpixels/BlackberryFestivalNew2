@@ -19,7 +19,7 @@ export const Hero = () => {
             className="mb-6"
           >
             <span className="inline-block px-6 py-2 rounded-full bg-slate-900 text-white text-xs font-black uppercase tracking-[0.3em] mb-4">
-              May 16 2026 • Inaugural Event
+              May 16, 2026 • Inaugural Event
             </span>
           </motion.div>
 
@@ -125,7 +125,7 @@ export const Hero = () => {
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           className="text-6xl font-display font-black uppercase tracking-[0.5em]"
         >
-        • BLACKBERRY FESTIVAL 2026 • BLACKBERRY FESTIVAL 2026  • BLACKBERRY FESTIVAL 2026
+        • PVA DELTA SIGMA THETA BLACKBERRY FESTIVAL 2026 • PVA DELTA SIGMA THETA BLACKBERRY FESTIVAL 2026  • BLACKBERRY FESTIVAL 2026
         </motion.div>
       </div>
     </section>
