@@ -125,7 +125,7 @@ export const Hero = () => {
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           className="text-6xl font-display font-black uppercase tracking-[0.5em]"
         >
-        • PVA DELTA SIGMA THETA BLACKBERRY FESTIVAL 2026 • PVA DELTA SIGMA THETA BLACKBERRY FESTIVAL 2026  • BLACKBERRY FESTIVAL 2026
+        • 2026 Delta Sigma Theta Sorority, Inc. of Prairie View Alumnae Chapter • BLACKBERRY FESTIVAL 2026
         </motion.div>
       </div>
     </section>
