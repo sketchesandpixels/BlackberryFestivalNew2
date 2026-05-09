@@ -19,7 +19,7 @@ const images = [
     alt: "Famous Blackberry Pie"
   },
   {
-    url: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&auto=format&fit=crop",
+    url: "people-chilling-and-relaxing-at-a-festival-loungin.webp",
     alt: "Live on Stage"
   },
   {
