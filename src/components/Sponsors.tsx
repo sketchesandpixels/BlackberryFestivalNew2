@@ -8,8 +8,8 @@ import { COLORS } from "../constants";
 
 const SPONSORS = [
   "Prairie View 4B Economic Development",
-  "Starbucks" Brand Name It - domains.brandnameit.com",
-  HEB",
+  "Starbucks" "Brand Name It - domains.brandnameit.com",
+  "HEB",
 ];
 
 export const Sponsors = () => {
