@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
-
-# Host
-Host: https://ais-dev-z2ujsnkcypi26i3bk6mxsk-394349036696.us-east1.run.app
-Sitemap: https://blackberryfestivalprairieview.com/sitemap.xml
+Sitemap: https://www.xml-sitemaps.com/download/blackberryfestivalprairieview.com-be7458a78/sitemap.xml
