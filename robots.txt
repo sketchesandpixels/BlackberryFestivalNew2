@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ais-dev-z2ujsnkcypi26i3bk6mxsk-394349036696.us-east1.run.app
