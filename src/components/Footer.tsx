@@ -30,7 +30,7 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-12 border-t border-slate-100 max-w-6xl mx-auto">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">
-             © 2026 Blackberry Festival • Blackberry Festival Prairie View
+             © 2026 Delta Sigma Theta Sorority, Inc. of Prairie View Alumnae Chapter • Blackberry Festival, Prairie View
           </p>
           <div className="flex gap-10">
              <button 
