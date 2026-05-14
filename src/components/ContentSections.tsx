@@ -71,7 +71,7 @@ const Section = ({
                   referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
-                  onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1596485802113-14c13a0da238?auto=format&fit=crop&w=800&q=80")}
+                  onError={(e) => (e.currentTarget.src = "aboutblackberryfestival.jpeg")}
                 />
               </div>
             </div>
