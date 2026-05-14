@@ -13,9 +13,9 @@ const images = [
     alt: "Pie Eating Fun"
   },
   {
-    url: "/blackberry_drink.jpg",
+    url: "/blackberry_festival_beverages_.webp",
     fallback: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop",
-    alt: "Blackberry Refreshments"
+    alt: "Blackberry Mocktails"
   },
   {
     url: "/blackberry_pie.jpg",
