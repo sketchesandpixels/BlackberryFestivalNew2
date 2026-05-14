@@ -33,9 +33,9 @@ const images = [
     alt: "Kids Zone Games"
   },
   {
-    url: "/jam_jar.jpg",
-    fallback: "https://images.unsplash.com/photo-1596485802113-14c13a0da238?w=800&auto=format&fit=crop",
-    alt: "Blackberry Preserves"
+    url: "/blackberry festival houston sea moss queen in sea moss.webp",
+    fallback: "blackberry festival houston sea moss queen in sea moss.webp",
+    alt: "Blackberry Sea Moss"
   },
   {
     url: "/add-black-people-enjoying-the-picnic-at-the-festiv.webp",
