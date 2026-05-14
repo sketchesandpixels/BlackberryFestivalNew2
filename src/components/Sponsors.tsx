@@ -13,7 +13,6 @@ const SPONSORS = [
   "Starbucks",
   "BrandNameIt.com Domains",
   "HEB",
-  "Blue Bell Creameries",
   
 ];
 

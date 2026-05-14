@@ -43,7 +43,7 @@ export const Hero = () => {
                 alt="Fresh Dark Blackberries" 
                 className="w-40 sm:w-64 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-95 object-cover"
                 referrerPolicy="no-referrer"
-                onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80")}
+                onError={(e) => (e.currentTarget.src = "blackberries.webp")}
               />
             </motion.div>
 
@@ -58,7 +58,7 @@ export const Hero = () => {
                 alt="Outdoor Celebration" 
                 className="w-32 sm:w-48 h-auto rounded-3xl -rotate-12 shadow-2xl opacity-90 border-4 border-white"
                 referrerPolicy="no-referrer"
-                onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=300&q=80")}
+                onError={(e) => (e.currentTarget.src = "blackberrieslogo.webp")}
               />
             </motion.div>
 
