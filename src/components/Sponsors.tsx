@@ -11,10 +11,10 @@ const SPONSORS = [
   "San Bernard Electric",
   "Prairie View 4B Economic Development",
   "Starbucks",
-  "Stella Rosa",
+  "BrandNameIt.com Domains",
   "HEB",
   "Blue Bell Creameries",
-  "Dr. Pepper"
+  
 ];
 
 export const Sponsors = () => {
