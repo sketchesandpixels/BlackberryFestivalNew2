@@ -43,7 +43,7 @@ export const Hero = () => {
                 alt="Fresh Dark Blackberries" 
                 className="w-40 sm:w-64 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-95 object-cover"
                 referrerPolicy="no-referrer"
-                onError={(e) => (e.currentTarget.src = "blackberries.png")}
+                onError={(e) => (e.currentTarget.src = "blackberries.jpeg")}
               />
             </motion.div>
 
@@ -58,7 +58,7 @@ export const Hero = () => {
                 alt="Outdoor Celebration" 
                 className="w-32 sm:w-48 h-auto rounded-3xl -rotate-12 shadow-2xl opacity-90 border-4 border-white"
                 referrerPolicy="no-referrer"
-                onError={(e) => (e.currentTarget.src = "blackberrieslogo.png")}
+                onError={(e) => (e.currentTarget.src = "blackberrieslogo.jpeg")}
               />
             </motion.div>
 
