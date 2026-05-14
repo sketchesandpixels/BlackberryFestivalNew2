@@ -39,7 +39,7 @@ export const Hero = () => {
               className="absolute -top-12 -left-12 sm:-top-20 sm:-left-20 z-0"
             >
               <img 
-                src="/blackberries.webp" 
+                src="/blackberries.jpeg" 
                 alt="Fresh Dark Blackberries" 
                 className="w-40 sm:w-64 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-95 object-cover"
                 referrerPolicy="no-referrer"
@@ -54,7 +54,7 @@ export const Hero = () => {
               className="absolute -bottom-10 -right-10 sm:-bottom-20 sm:-right-20 z-0"
             >
               <img 
-                src="/blackberrieslogo.webp" 
+                src="/blackberries.jpeg" 
                 alt="Outdoor Celebration" 
                 className="w-32 sm:w-48 h-auto rounded-3xl -rotate-12 shadow-2xl opacity-90 border-4 border-white"
                 referrerPolicy="no-referrer"
