@@ -19,12 +19,12 @@ const images = [
   },
   {
     url: "/blackberry_pie.jpg",
-    fallback: "https://images.unsplash.com/photo-1616031037011-087000171abe?w=800&auto=format&fit=crop",
+    fallback: "blackberry_festival_cobbler_large .webp",
     alt: "Famous Blackberry Pie"
   },
   {
-    url: "/live_music.jpg",
-    fallback: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&auto=format&fit=crop",
+    url: "/Blackberry_Festival_Prairie_View.jpeg",
+    fallback: "Blackberry_Festival_Prairie_View.jpeg",
     alt: "Live on Stage"
   },
   {
