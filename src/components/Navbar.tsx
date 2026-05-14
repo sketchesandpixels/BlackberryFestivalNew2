@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { COLORS } from "../constants";
 import { Button } from "@/components/ui/button";
-import { DeltaLogo } from "./DeltaLogo.png";
+import { DeltaLogo } from "./DeltaLogo";
 
 export const Navbar = () => {
   const { scrollY } = useScroll();
