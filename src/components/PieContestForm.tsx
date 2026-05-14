@@ -85,7 +85,7 @@ export const PieContestForm = () => {
               alt="Blackberry Pie" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
-              onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1616031037011-087000171abe?auto=format&fit=crop&w=1200&q=80")}
+              onError={(e) => (e.currentTarget.src = "blackberrypiecontest.webp")}
             />
           </div>
           <div className="absolute -bottom-10 -right-10 bg-rose-600 text-white p-12 rounded-full w-48 h-48 flex items-center justify-center text-center font-display font-black uppercase text-xl leading-none shadow-xl transform rotate-12">
