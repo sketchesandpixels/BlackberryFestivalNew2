@@ -26,38 +26,7 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
           </div>
           
           <div className="flex items-center justify-center gap-12 mb-16">
-             <a 
-               href="https://instagram.com" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
-             >
-               Instagram
-             </a>
-             <a 
-               href="https://www.facebook.com/profile.php?id=61589187458775" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
-             >
-               Facebook
-             </a>
-             <a 
-               href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent("Join me at the Inaugural Blackberry Festival 2026!")}`} 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
-             >
-               Twitter
-             </a>
-             <a 
-               href="https://tiktok.com" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
-             >
-               TikTok
-             </a>
+             
           </div>
         </div>
 
