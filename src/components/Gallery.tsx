@@ -38,8 +38,8 @@ const images = [
     alt: "Blackberry Preserves"
   },
   {
-    url: "/festival_highlights.jpg",
-    fallback: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop",
+    url: "/add-black-people-enjoying-the-picnic-at-the-festiv.webp",
+    fallback: "add-black-people-enjoying-the-picnic-at-the-festiv.webp",
     alt: "Festival Highlights"
   }
 ];
