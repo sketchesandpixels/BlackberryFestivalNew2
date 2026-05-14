@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Card, CardContent } from "@/components/ui/card";
 import { COLORS } from "../constants";
 
 export const RegistrationForm = () => {
@@ -21,15 +22,15 @@ export const RegistrationForm = () => {
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
         >
-          <div className="border-none shadow-2xl rounded-[3rem] overflow-hidden bg-white">
-            <div className="p-8 md:p-20 text-center">
+          <Card className="border-none shadow-2xl rounded-[3rem] overflow-hidden bg-white">
+            <CardContent className="p-8 md:p-20 text-center">
               <div className="flex flex-col items-center max-w-2xl mx-auto">
                 <div className="w-20 h-20 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-inner">
                   <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
                 </div>
-
+                
                 <h3 className="text-3xl font-display font-black mb-4 text-slate-900 uppercase">Vendor Applications Now Open</h3>
                 <p className="text-slate-600 text-lg mb-12 font-medium">
                   We've streamlined our application process. Click the button below to visit our secure registration portal and complete your vendor application.
@@ -43,7 +44,7 @@ export const RegistrationForm = () => {
                    ))}
                 </div>
 
-                <motion.a
+                <motion.a 
                   href="https://www.zeffy.com/en-US/ticketing/blackberry-festival-vendor-sign-up"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -54,13 +55,13 @@ export const RegistrationForm = () => {
                 >
                   Apply to be a Vendor
                 </motion.a>
-
+                
                 <p className="mt-8 text-slate-500 text-sm uppercase tracking-widest font-bold">
                   Payments are handled securely through Zeffy.
                 </p>
               </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </section>
