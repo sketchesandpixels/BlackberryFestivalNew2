@@ -79,7 +79,7 @@ export const HotelInfo = () => {
 
             <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden group">
               <img 
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" 
+                src="hotel-blackberry.png" 
                 alt="Hotel room illustration" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
