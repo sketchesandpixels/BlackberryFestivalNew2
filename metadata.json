@@ -1,6 +1,10 @@
 {
-  "name": "Brandnameit Landing Page",
-  "description": "A modern, high-contrast landing page built with a dark slate palette and vibrant orange accents.",
-  "requestFramePermissions": [],
-  "majorCapabilities": []
+  "name": "Remix: Blackberry Festival 2026",
+  "description": "A vibrant, modern, high-converting landing page for the Inaugural Blackberry Festival hosted by the Delta Sigma Theta Sorority, Inc. Prairie View Alumnae Chapter. Featuring vendor registration capabilities.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

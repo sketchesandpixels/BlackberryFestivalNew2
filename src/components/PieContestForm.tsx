@@ -52,7 +52,7 @@ export const PieContestForm = () => {
                   </div>
 
                   <motion.a 
-                    href="https://www.zeffy.com/en-US/ticketing/inaugural-blackberry-festival"
+                    href="https://www.zeffy.com/en-US/ticketing/blackberry-festival-pie-competition"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-10 h-18 text-lg tracking-widest uppercase font-black shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all rounded-full w-full"
@@ -81,14 +81,15 @@ export const PieContestForm = () => {
         >
           <div className="relative aspect-square rounded-[10rem] overflow-hidden shadow-2xl">
             <img 
-              src="blackberrypiecontest.webp" 
+              src="/blackberry_pie.jpg" 
               alt="Blackberry Pie" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
+              onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1616031037011-087000171abe?auto=format&fit=crop&w=1200&q=80")}
             />
           </div>
           <div className="absolute -bottom-10 -right-10 bg-rose-600 text-white p-12 rounded-full w-48 h-48 flex items-center justify-center text-center font-display font-black uppercase text-xl leading-none shadow-xl transform rotate-12">
-            Win<br/>Baker<br/>Delights
+            Win a<br/>Blue<br/>Ribbon
           </div>
         </motion.div>
 

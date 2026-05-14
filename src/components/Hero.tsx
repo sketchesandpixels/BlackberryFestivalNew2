@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { FESTIVAL_INFO, COLORS } from "../constants";
+import { DeltaLogo } from "./DeltaLogo";
 
 export const Hero = () => {
   return (
@@ -16,10 +17,17 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-6"
+            className="flex flex-col items-center gap-4 mb-8"
           >
-            <span className="inline-block px-6 py-2 rounded-full bg-slate-900 text-white text-xs font-black uppercase tracking-[0.3em] mb-4">
-              May 16, 2026 • Inaugural Event
+            <div className="flex items-center gap-3 bg-white/50 backdrop-blur-sm p-1 pr-4 rounded-full border border-slate-100 shadow-sm">
+              <div className="w-10 h-10 rounded-full overflow-hidden">
+                <DeltaLogo className="w-full h-full p-2" />
+              </div>
+              <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">Hosted by PVAC Delta Sigma Theta</span>
+            </div>
+            
+            <span className="inline-block px-6 py-2 rounded-full bg-slate-900 text-white text-xs font-black uppercase tracking-[0.3em]">
+              Summer 2026 • Inaugural Event
             </span>
           </motion.div>
 
@@ -28,12 +36,14 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               animate={{ opacity: 1, scale: 1, rotate: -2 }}
               transition={{ duration: 1, type: "spring", bounce: 0.3 }}
-              className="absolute -top-12 -left-32 sm:-top-16 sm:-left-55"
+              className="absolute -top-12 -left-12 sm:-top-20 sm:-left-20 z-0"
             >
               <img 
-                src="/blackberries.webp" 
-                alt="Fresh Blackberries" 
-                className="w-40 sm:w-72 h-auto rounded-[3rem] rotate-12 drop-shadow-2xl"
+                src="/blackberry_clipart.png" 
+                alt="Fresh Dark Blackberries" 
+                className="w-40 sm:w-64 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-95 object-cover"
+                referrerPolicy="no-referrer"
+                onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80")}
               />
             </motion.div>
 
@@ -41,12 +51,14 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.8, rotate: 15 }}
               animate={{ opacity: 1, scale: 1, rotate: 10 }}
               transition={{ duration: 1.2, type: "spring", bounce: 0.3, delay: 0.1 }}
-              className="absolute -bottom-16 -right-24 sm:-bottom-10 sm:-right-44"
+              className="absolute -bottom-10 -right-10 sm:-bottom-20 sm:-right-20 z-0"
             >
               <img 
-                src="/blackberrieslogo.webp" 
-                alt="Golden Hour" 
-                className="w-32 sm:w-56 h-auto rounded-3xl -rotate-12 drop-shadow-xl"
+                src="/festival_collage.jpg" 
+                alt="Outdoor Celebration" 
+                className="w-32 sm:w-48 h-auto rounded-3xl -rotate-12 shadow-2xl opacity-90 border-4 border-white"
+                referrerPolicy="no-referrer"
+                onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=300&q=80")}
               />
             </motion.div>
 
@@ -89,7 +101,7 @@ export const Hero = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="text-xl md:text-2xl text-slate-600 font-medium max-w-3xl mb-12 leading-relaxed"
           >
-            Where culture meets the harvest. Join the <span className="font-bold text-slate-900 underline decoration-yellow-400 decoration-4 underline-offset-4"> Delta Sigma Theta Sorority, Inc. of Prairie View Alumnae Chapter </span> for a day of music, heritage, and the sweetest berries of the season.
+            Where culture meets the harvest. Join the <span className="font-bold text-slate-900 underline decoration-rose-600 decoration-4 underline-offset-4">Delta Sigma Theta Sorority, Inc. Prairie View Alumnae Chapter</span> for a day of music, heritage, and the sweetest berries of the season.
           </motion.p>
 
           <motion.div
@@ -121,11 +133,11 @@ export const Hero = () => {
       {/* Bottom rail text */}
       <div className="absolute bottom-10 left-0 w-full overflow-hidden whitespace-nowrap opacity-10 pointer-events-none">
         <motion.div 
-          animate={{ x: [0, -1000] }}
+          animate={{ x: [0, -1200] }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           className="text-6xl font-display font-black uppercase tracking-[0.5em]"
         >
-        • 2026 Delta Sigma Theta Sorority, Inc. of Prairie View Alumnae Chapter • BLACKBERRY FESTIVAL 2026
+          HOSTED BY PVAC DELTA SIGMA THETA • BLACKBERRY FESTIVAL 2026 • HOSTED BY PVAC DELTA SIGMA THETA • BLACKBERRY FESTIVAL 2026 • HOSTED BY PVAC DELTA SIGMA THETA • BLACKBERRY FESTIVAL 2026
         </motion.div>
       </div>
     </section>

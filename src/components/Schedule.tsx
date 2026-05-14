@@ -31,7 +31,7 @@ const SCHEDULE_DATA = [
     time: "3:00 PM",
     title: "Family Fun & Large Games",
     location: "The Kids Zone",
-    description: "Bound House and games for the whole family.",
+    description: "Bounce House and games for the whole family.",
     icon: Ticket,
     color: "#3b82f6" // blue-500
   },
@@ -48,7 +48,7 @@ const SCHEDULE_DATA = [
     title: "B.I.G. Headline Band & Vibes",
     location: "Main Stage",
     description: "B.I.G. is the live, high energy, headliner and closes the Inaugural Blackberry Festival.",
-    icon: Star,
+    icon: Music,
     color: COLORS.crimson
   }
 ];

@@ -10,7 +10,7 @@ import { Hotel, ExternalLink, Calendar, Info } from "lucide-react";
 export const HotelInfo = () => {
   if (!FESTIVAL_INFO.hotel) return null;
 
-  const { name, rate, deadline, link } = FESTIVAL_INFO.hotel;
+  const { name, rate, deadline, link, stayDates } = FESTIVAL_INFO.hotel;
 
   return (
     <section id="hotel" className="py-24 bg-white relative overflow-hidden">
@@ -30,7 +30,7 @@ export const HotelInfo = () => {
             Stay in <span style={{ color: COLORS.purple }}>Comfort</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
-            We've partnered with local hotels to provide special group rates for our festival attendees.
+            We've partnered with local hotels to provide special group rates for our festival attendees for the weekend of {stayDates}.
           </p>
         </motion.div>
 

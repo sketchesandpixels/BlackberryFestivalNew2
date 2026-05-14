@@ -5,11 +5,16 @@
 
 import { motion } from "motion/react";
 import { COLORS } from "../constants";
+import { DeltaLogo } from "./DeltaLogo";
 
 const SPONSORS = [
+  "San Bernard Electric",
   "Prairie View 4B Economic Development",
-  "Starbucks", "Brand Name  It ",
-  "HEB"
+  "Starbucks",
+  "Stella Rosa",
+  "HEB",
+  "Blue Bell Creameries",
+  "Dr. Pepper"
 ];
 
 export const Sponsors = () => {
@@ -17,10 +22,12 @@ export const Sponsors = () => {
     <section className="py-24 bg-white relative overflow-hidden" id="sponsors">
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 mb-4 block">Partnership</span>
+          <DeltaLogo className="w-16 h-16 mb-4" />
+          <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 mb-4 block">Hosted & Presented by</span>
           <h2 className="text-4xl md:text-5xl font-display font-black mb-6 leading-tight text-slate-900 uppercase">
-            Fueling the <span className="text-rose-600">Community</span>
+            Delta Sigma Theta <span className="text-rose-600">Sorority</span>
           </h2>
+          <p className="text-slate-500 font-medium uppercase tracking-widest text-sm mb-8">Prairie View Alumnae Chapter</p>
           <div className="h-1 w-20 bg-slate-900 mx-auto" />
         </div>
 

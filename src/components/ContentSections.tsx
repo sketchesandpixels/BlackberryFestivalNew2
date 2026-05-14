@@ -71,6 +71,7 @@ const Section = ({
                   referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
+                  onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1596485802113-14c13a0da238?auto=format&fit=crop&w=800&q=80")}
                 />
               </div>
             </div>
@@ -86,8 +87,8 @@ export const ContentSections = () => {
     <div className="bg-white">
       <Section 
         title="About the Festival"
-        content="The Inaugural Blackberry Festival is more than just a celebration of the harvest; it is a movement of culture, community, and connection. Hosted by the Blackberry Festival of Prairie View, we invite you to experience the rich heritage of our region through the lens of one of its most beloved fruits."
-        image="/aboutblackberryfestival.jpeg"
+        content="The Inaugural Blackberry Festival is more than just a celebration of the harvest; it is a movement of culture, community, and connection. Hosted by the Prairie View Alumnae Chapter of Delta Sigma Theta Sorority, Inc., we invite you to experience the rich heritage of our region through the lens of one of its most beloved fruits."
+        image="/festival_highlights.jpg"
         imageAlt="Fresh ripe blackberries on the bush"
         accentColor={COLORS.purple}
         bgColor="bg-white"
@@ -99,7 +100,7 @@ export const ContentSections = () => {
       <Section 
         title="Vibes & Heritage"
         content="From the rhythmic beats of live local bands to the competitive spirit of our famous Pie Contest, every moment is curated to spark joy. Wander through our artisan marketplace, indulge in gourmet food trucks, and create lasting memories with the whole family in our dedicated fun zones."
-        image="/blackberry-crowd.webp"
+        image="/blackberry_cobbler.jpg"
         imageAlt="Festival crowd"
         reverse={true}
         accentColor={COLORS.crimson}

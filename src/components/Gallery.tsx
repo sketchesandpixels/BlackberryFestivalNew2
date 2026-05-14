@@ -3,36 +3,44 @@ import { COLORS } from "../constants";
 
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&auto=format&fit=crop",
+    url: "/bbq_grill.jpg",
+    fallback: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&auto=format&fit=crop",
     alt: "Texas Bar-B-Que"
   },
   {
-    url: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&auto=format&fit=crop",
-    alt: "Street Tacos"
+    url: "/pie_eating.jpg",
+    fallback: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&auto=format&fit=crop",
+    alt: "Pie Eating Fun"
   },
   {
-    url: "blackberry_festival_beverages_.webp",
-    alt: "Blackberry Beverages"
+    url: "/blackberry_drink.jpg",
+    fallback: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop",
+    alt: "Blackberry Refreshments"
   },
   {
-    url: "blackberrypie.webp",
+    url: "/blackberry_pie.jpg",
+    fallback: "https://images.unsplash.com/photo-1616031037011-087000171abe?w=800&auto=format&fit=crop",
     alt: "Famous Blackberry Pie"
   },
   {
-    url: "people-chilling-and-relaxing-at-a-festival-loungin.webp",
+    url: "/live_music.jpg",
+    fallback: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&auto=format&fit=crop",
     alt: "Live on Stage"
   },
   {
-    url: "blackberry_festival_bounce_house.webp",
+    url: "/bouncy_house.jpg",
+    fallback: "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop",
     alt: "Kids Zone Games"
   },
   {
-    url: "blackberry festival houston sea moss queen in sea moss.webp",
-    alt: "Blackberry Harvest Seamoss"
+    url: "/jam_jar.jpg",
+    fallback: "https://images.unsplash.com/photo-1596485802113-14c13a0da238?w=800&auto=format&fit=crop",
+    alt: "Blackberry Preserves"
   },
   {
-    url: "add-black-people-enjoying-the-picnic-at-the-festiv.webp",
-    alt: "Village Vibes"
+    url: "/festival_highlights.jpg",
+    fallback: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop",
+    alt: "Festival Highlights"
   }
 ];
 
@@ -54,7 +62,7 @@ export const Gallery = () => {
             className="bg-rose-600 text-white px-8 py-4 mb-4 transform -rotate-2 shadow-2xl"
           >
             <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter leading-none">
-              Food, Beverages & Fun
+              Food, Drinks & Fun
             </h2>
           </motion.div>
           <p className="text-xl font-display font-black uppercase tracking-widest text-slate-400">
@@ -93,6 +101,7 @@ export const Gallery = () => {
                   initial={{ filter: 'grayscale(1)' }}
                   src={img.url}
                   alt={img.alt}
+                  onError={(e) => (e.currentTarget.src = (img as any).fallback)}
                   className="w-full h-full object-cover transition-all duration-700"
                   referrerPolicy="no-referrer"
                   loading="lazy"
