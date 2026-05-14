@@ -1,20 +1,15 @@
+import DeltaLogo from "./DeltaLogo.png";
+
 type DeltaLogoProps = {
   className?: string;
 };
 
 export const DeltaLogo = ({ className }: DeltaLogoProps) => {
   return (
-    <svg 
+    <img 
+      src={DeltaLogo} 
       className={className} 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Replace this path with your actual logo SVG */}
-      <path 
-        d="DeltaLogo.webp" 
-        fill="currentColor" 
-      />
-    </svg>
+      alt="Delta Sigma Theta Prairie View Alumnae Chapter" 
+    />
   );
 };
