@@ -29,7 +29,7 @@ const images = [
   },
   {
     url: "/bouncy_house.jpg",
-    fallback: "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop",
+    fallback: "blackberry_festival_bounce_house.webp",
     alt: "Kids Zone Games"
   },
   {
