@@ -55,7 +55,7 @@ export const Hero = () => {
             >
               <img 
                 src="/blackberries.jpeg" 
-                alt="Outdoor Celebration" 
+                alt="Celebration" 
                 className="w-32 sm:w-48 h-auto rounded-3xl -rotate-12 shadow-2xl opacity-90 border-4 border-white"
                 referrerPolicy="no-referrer"
                 onError={(e) => (e.currentTarget.src = "blackberrieslogo.jpeg")}
