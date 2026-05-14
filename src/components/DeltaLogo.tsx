@@ -12,7 +12,7 @@ export const DeltaLogo = ({ className }: DeltaLogoProps) => {
     >
       {/* Replace this path with your actual logo SVG */}
       <path 
-        d="DeltaLogo.svg" 
+        d="DeltaLogo.webp" 
         fill="currentColor" 
       />
     </svg>
