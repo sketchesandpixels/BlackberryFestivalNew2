@@ -11,18 +11,6 @@ const PROMO_IMAGES = [
 
 export const PromoVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Simulated video playback using a cinematic image reel
-  useEffect(() => {
-    let interval: ReturnType<typeof setInterval>;
-    if (isPlaying) {
-      interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % PROMO_IMAGES.length);
-      }, 3500); // Crossfade every 3.5 seconds
-    }
-    return () => clearInterval(interval);
-  }, [isPlaying]);
 
   return (
     <section className="py-24 bg-slate-950 relative overflow-hidden text-white" id="promo">
@@ -54,63 +42,55 @@ export const PromoVideo = () => {
           viewport={{ once: true }}
           className="relative aspect-video w-full rounded-[2rem] overflow-hidden shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] bg-black border border-slate-800 group"
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="wait">
             {isPlaying ? (
-              <motion.img
-                key={`playing-${currentIndex}`}
-                src={PROMO_IMAGES[currentIndex]}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.05 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              <motion.img
-                key="poster"
-                src="https://images.unsplash.com/photo-1464366400600-71ebb90ffbd4?w=1600&auto=format&fit=crop"
+              <motion.div
+                key="youtube-player"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 0.6 }}
+                animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 w-full h-full object-cover grayscale-[30%] blur-[2px]"
-              />
+                className="absolute inset-0 w-full h-full"
+              >
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/nz8ihlDLlro?si=A5iFdNyw4pkGsCCo&autoplay=1"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </motion.div>
+            ) : (
+              <motion.div key="poster-container" className="absolute inset-0">
+                <motion.img
+                  src="https://images.unsplash.com/photo-1464366400600-71ebb90ffbd4?w=1600&auto=format&fit=crop"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.6 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute inset-0 w-full h-full object-cover grayscale-[30%] blur-[2px]"
+                />
+                
+                {/* Player Controls & Overlay */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 bg-black/40">
+                  <button
+                    onClick={() => setIsPlaying(true)}
+                    className="w-24 h-24 sm:w-32 sm:h-32 rounded-full flex items-center justify-center transition-transform hover:scale-110 active:scale-95 shadow-2xl backdrop-blur-md border border-white/20"
+                    style={{ backgroundColor: COLORS.crimson }}
+                  >
+                    <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white ml-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                  <p className="text-white mt-6 font-bold tracking-[0.2em] uppercase text-sm">
+                    Watch Promo Reel
+                  </p>
+                </div>
+              </motion.div>
             )}
           </AnimatePresence>
-
-          {/* Player Controls & Overlay */}
-          <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ${isPlaying ? 'opacity-0 hover:opacity-100 bg-black/40' : 'opacity-100 bg-black/60'}`}>
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="w-24 h-24 sm:w-32 sm:h-32 rounded-full flex items-center justify-center transition-transform hover:scale-110 active:scale-95 shadow-2xl backdrop-blur-md border border-white/20"
-              style={{ backgroundColor: isPlaying ? 'rgba(255,255,255,0.1)' : COLORS.crimson }}
-            >
-              {isPlaying ? (
-                <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white ml-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 4h4v16H6zm8 0h4v16h-4z" />
-                </svg>
-              ) : (
-                <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white ml-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              )}
-            </button>
-            <p className="text-white mt-6 font-bold tracking-[0.2em] uppercase text-sm">
-              {isPlaying ? 'Pause Reel' : 'Watch Promo Reel'}
-            </p>
-          </div>
-
-          {/* Simulated Progress Bar */}
-          {isPlaying && (
-            <div className="absolute bottom-0 left-0 w-full h-1.5 bg-slate-800">
-              <motion.div 
-                className="h-full bg-white"
-                initial={{ width: "0%" }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
-              />
-            </div>
-          )}
         </motion.div>
       </div>
     </section>
