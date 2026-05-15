@@ -41,7 +41,7 @@ export const Hero = () => {
               <img 
                 src="/blackberries.jpeg" 
                 alt="Fresh Dark Blackberries" 
-                className="w-40 sm:w-64 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-95 object-cover"
+                className="w-100 sm:w-64 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-100 object-cover"
                 referrerPolicy="no-referrer"
                 onError={(e) => (e.currentTarget.src = "blackberries.jpeg")}
               />
