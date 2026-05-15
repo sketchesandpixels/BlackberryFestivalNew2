@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+change the code to where the blackberries.jpeg is transparent and its moved from behind the Blackberry Festival logo: import { motion } from "motion/react";
 import { FESTIVAL_INFO, COLORS } from "../constants";
 import { DeltaLogo } from "./DeltaLogo";
 
@@ -25,76 +25,74 @@ export const Hero = () => {
               </div>
               <span className="text- font-black uppercase tracking-widest text-slate-500">Hosted by PVAC Delta Sigma Theta</span>
             </div>
-
+            
             <span className="inline-block px-6 py-2 rounded-full bg-slate-900 text-white text-xs font-black uppercase tracking-[0.3em]">
               Summer 2026 • Inaugural Event
             </span>
           </motion.div>
 
           <div className="relative mb-12">
-            {/* MOVED TO FRONT: z-20 + opacity-60 for transparency */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-              animate={{ opacity: 0.6, scale: 1, rotate: -2 }}
+              animate={{ opacity: 1, scale: 1, rotate: -2 }}
               transition={{ duration: 1, type: "spring", bounce: 0.3 }}
-              className="absolute -top-12 -left-50 sm:-top-20 sm:-left-20 z-20 pointer-events-none"
+              className="absolute -top-12 -left-50 sm:-top-20 sm:-left-20 z-0"
             >
-              <img
-                src="/blackberries.jpeg"
-                alt="Fresh Dark Blackberries"
-                className="w-40 sm:w-64 h-auto rounded- rotate-12 shadow-2xl object-cover"
+              <img 
+                src="/blackberries.jpeg" 
+                alt="Fresh Dark Blackberries" 
+                className="w-40 sm:w-64 h-auto rounded- rotate-12 shadow-2xl opacity-100 object-cover"
                 referrerPolicy="no-referrer"
                 onError={(e) => (e.currentTarget.src = "blackberries.jpeg")}
               />
             </motion.div>
 
-            {/* MOVED TO FRONT: z-20 + opacity-60 for transparency */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: 15 }}
-              animate={{ opacity: 0.6, scale: 1, rotate: 10 }}
+              animate={{ opacity: 1, scale: 1, rotate: 10 }}
               transition={{ duration: 1.2, type: "spring", bounce: 0.3, delay: 0.1 }}
-              className="absolute -bottom-10 -right-10 sm:-bottom-20 sm:-right-20 z-20 pointer-events-none"
+              className="absolute -bottom-10 -right-10 sm:-bottom-20 sm:-right-20 z-0"
             >
-              <img
-                src="/blackberries.jpeg"
-                alt="Celebration"
-                className="w-32 sm:w-48 h-auto rounded-3xl -rotate-12 shadow-2xl border-4 border-white"
+              <img 
+                src="/blackberries.jpeg" 
+                alt="Celebration" 
+                className="w-32 sm:w-48 h-auto rounded-3xl -rotate-12 shadow-2xl opacity-90 border-4 border-white"
                 referrerPolicy="no-referrer"
                 onError={(e) => (e.currentTarget.src = "blackberrieslogo.jpeg")}
               />
             </motion.div>
 
-            <h1 className="relative z-10 flex flex-col items-center xl:items-start">
-              <div className="relative inline-block">
-                <motion.span
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="absolute -top-6 -right-6 text-sm font-black uppercase tracking-[0.4em]"
-                  style={{ color: COLORS.crimson }}
-                >
-                  Inaugural
-                </motion.span>
+              <h1 className="relative z-10 flex flex-col items-center xl:items-start">
+                <div className="relative inline-block">
+                  <motion.span
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="absolute -top-6 -right-6 text-sm font-black uppercase tracking-[0.4em]"
+                    style={{ color: COLORS.crimson }}
+                  >
+                    Inaugural
+                  </motion.span>
+                  <motion.span
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="text- sm:text- font-script leading-none"
+                    style={{ color: COLORS.purple }}
+                  >
+                    Blackberry
+                  </motion.span>
+                </div>
                 <motion.span
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className="text- sm:text- font-script leading-none"
-                  style={{ color: COLORS.purple }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="text- sm:text- font-display font-black leading-[0.7] uppercase tracking-tighter mt-2"
+                  style={{ color: COLORS.crimson }}
                 >
-                  Blackberry
+                  Festival
                 </motion.span>
-              </div>
-              <motion.span
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="text- sm:text- font-display font-black leading-[0.7] uppercase tracking-tighter mt-2"
-                style={{ color: COLORS.crimson }}
-              >
-                Festival
-              </motion.span>
-            </h1>
+              </h1>
           </div>
 
           <motion.p
@@ -131,10 +129,10 @@ export const Hero = () => {
           </motion.div>
         </div>
       </div>
-
+      
       {/* Bottom rail text */}
       <div className="absolute bottom-10 left-0 w-full overflow-hidden whitespace-nowrap opacity-10 pointer-events-none">
-        <motion.div
+        <motion.div 
           animate={{ x: [0, -1200] }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           className="text-6xl font-display font-black uppercase tracking-[0.5em]"
