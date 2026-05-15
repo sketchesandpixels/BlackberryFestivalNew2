@@ -22,7 +22,7 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
               <span className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter -mt-2" style={{ color: COLORS.crimson }}>Festival</span>
               <span className="text-xl font-display font-black tracking-[0.5em] mt-2 opacity-20">2026</span>
             </div>
-            <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 block mt-4">Hosted by Prairie View Alumnae Chapter of Delta Sigma Theta Sorority, Inc.</span>
+            <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 block mt-4">Hosted by PVAC of Delta Sigma Theta Sorority, Inc.</span>
           </div>
           
           <div className="flex items-center justify-center gap-12 mb-16">
