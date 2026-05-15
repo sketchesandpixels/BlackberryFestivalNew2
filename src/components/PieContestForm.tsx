@@ -89,7 +89,7 @@ export const PieContestForm = () => {
             />
           </div>
           <div className="absolute -bottom-10 -right-10 bg-rose-600 text-white p-12 rounded-full w-48 h-48 flex items-center justify-center text-center font-display font-black uppercase text-xl leading-none shadow-xl transform rotate-12">
-            Win a<br/>Blue<br/>Ribbon
+            Win<br/>baking<br/>tools
           </div>
         </motion.div>
 
