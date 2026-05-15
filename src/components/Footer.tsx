@@ -47,13 +47,7 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
              >
                Contact Us
              </button>
-             <a 
-               href="/welcome_email.html"
-               target="_blank"
-               className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-slate-900 transition-colors cursor-pointer outline-none"
-             >
-               Welcome Email
-             </a>
+             
           </div>
         </div>
       </div>
