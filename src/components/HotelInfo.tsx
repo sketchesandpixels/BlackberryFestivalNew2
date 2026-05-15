@@ -30,7 +30,7 @@ export const HotelInfo = () => {
             Stay in <span style={{ color: COLORS.purple }}>Comfort</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
-            We've partnered with local hotels to provide special group rates for our festival attendees for the weekend of {stayDates}.
+            We've partnered with Fairfield by Marriott Inn & Suites to provide special group rates for our festival attendees for the weekend of {stayDates}.
           </p>
         </motion.div>
 
