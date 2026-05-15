@@ -10,7 +10,7 @@ export const DeltaLogo = ({ className = "w-16 h-16", showText = false }: { class
       <div className="relative w-full h-full flex items-center justify-center">
         {!imageError ? (
           <img
-            src="/logo_pvac.png"
+            src="/pvac_logo.webp"
             alt="PVAC Logo"
             className="w-full h-full object-contain"
             onError={(e) => {
