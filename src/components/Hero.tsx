@@ -36,12 +36,12 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               animate={{ opacity: 1, scale: 1, rotate: -2 }}
               transition={{ duration: 1, type: "spring", bounce: 0.3 }}
-              className="absolute -top-12 -left-12 sm:-top-20 sm:-left-20 z-0"
+              className="absolute -top-12 -left-50 sm:-top-20 sm:-left-20 z-0"
             >
               <img 
                 src="/blackberries.jpeg" 
                 alt="Fresh Dark Blackberries" 
-                className="w-100 sm:w-64 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-100 object-cover"
+                className="w-40 sm:w-64 h-auto rounded-[3rem] rotate-12 shadow-2xl opacity-100 object-cover"
                 referrerPolicy="no-referrer"
                 onError={(e) => (e.currentTarget.src = "blackberries.jpeg")}
               />
