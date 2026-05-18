@@ -27,9 +27,9 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
           </div>
           
           <div className="flex items-center justify-center gap-12 mb-16">
-         <div>
-         <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 block mt-4">Share the Blackberry Festival Vibe</span>
-         </div>
+        
+               Share the Blackberry Festival Vibe
+        
 
              <a 
                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
