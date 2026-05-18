@@ -22,11 +22,42 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
               <span className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter -mt-2" style={{ color: COLORS.crimson }}>Festival</span>
               <span className="text-xl font-display font-black tracking-[0.5em] mt-2 opacity-20">2026</span>
             </div>
-            <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 block mt-4">Hosted by PVAC of Delta Sigma Theta Sorority, Inc.</span>
+            <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 block mt-4">Hosted by Prairie View Alumnae Chapter of Delta Sigma Theta Sorority, Inc.</span>
           </div>
           
           <div className="flex items-center justify-center gap-12 mb-16">
-             
+             <a 
+               href="https://instagram.com" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
+             >
+               Instagram
+             </a>
+             <a 
+               href="https://www.facebook.com/profile.php?id=61589187458775" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
+             >
+               Facebook
+             </a>
+             <a 
+               href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent("Join me at the Inaugural Blackberry Festival 2026!")}`} 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
+             >
+               Twitter
+             </a>
+             <a 
+               href="https://tiktok.com" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
+             >
+               TikTok
+             </a>
           </div>
         </div>
 
@@ -47,7 +78,22 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
              >
                Contact Us
              </button>
-             
+             <a 
+               href="/welcome_email.html"
+               target="_blank"
+               className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-slate-900 transition-colors cursor-pointer outline-none"
+             >
+               Welcome Email
+             </a>
+             <a 
+               href="https://www.zeffy.com/en-US/ticketing/blackberry-festival-vendor-sign-up"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-xs font-black uppercase tracking-[0.2em] text-rose-600 hover:text-rose-500 transition-colors"
+               style={{ fontWeight: 900 }}
+             >
+               Donate
+             </a>
           </div>
         </div>
       </div>

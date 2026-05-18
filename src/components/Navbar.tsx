@@ -49,6 +49,13 @@ export const Navbar = () => {
             Schedule
           </button>
           <Button
+            onClick={() => window.open('https://www.zeffy.com/en-US/ticketing/blackberry-festival-vendor-sign-up', '_blank')}
+            className="rounded-full font-black px-6 py-5 text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-xl hidden lg:flex"
+            style={{ backgroundColor: COLORS.purple, color: "white" }}
+          >
+            Donate
+          </Button>
+          <Button
             onClick={() => document.getElementById('contest')?.scrollIntoView({ behavior: 'smooth' })}
             className="rounded-full font-black px-6 py-5 text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-xl"
             style={{ backgroundColor: COLORS.crimson, color: "white" }}
