@@ -9,6 +9,7 @@ interface FooterProps {
 
 export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
   const shareUrl = "https://blackberryfestivalprairieview.com";
+  const shareText = "Join me at the Inaugural Blackberry Festival 2026! Music, food, culture, and black excellence.";
   
   return (
     <footer className="py-32 bg-white text-slate-900 relative overflow-hidden border-t border-slate-100">
@@ -27,15 +28,7 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
           
           <div className="flex items-center justify-center gap-12 mb-16">
              <a 
-               href="https://instagram.com" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
-             >
-               Instagram
-             </a>
-             <a 
-               href="https://www.facebook.com/profile.php?id=61589187458775" 
+               href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
                target="_blank" 
                rel="noopener noreferrer" 
                className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
@@ -43,12 +36,20 @@ export const Footer = ({ onOpenContact, onOpenPrivacy }: FooterProps) => {
                Facebook
              </a>
              <a 
-               href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent("Join me at the Inaugural Blackberry Festival 2026!")}`} 
+               href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`}
                target="_blank" 
                rel="noopener noreferrer" 
                className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
              >
                Twitter
+             </a>
+             <a 
+               href="https://instagram.com" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="text-sm font-black uppercase tracking-widest hover:text-purple-600 transition-colors"
+             >
+               Instagram
              </a>
              <a 
                href="https://tiktok.com" 
