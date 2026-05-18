@@ -31,7 +31,7 @@ export const Hero = () => {
               className="absolute -top-12 -left-32 sm:-top-16 sm:-left-55"
             >
               <img 
-                src="/blackberries.jpeg" 
+                src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80" 
                 alt="Fresh Blackberries" 
                 className="w-40 sm:w-72 h-auto rounded-[3rem] rotate-12 drop-shadow-2xl"
               />
@@ -44,7 +44,7 @@ export const Hero = () => {
               className="absolute -bottom-16 -right-24 sm:-bottom-10 sm:-right-44"
             >
               <img 
-                src="/blackberrieslogo.jpeg" 
+                src="https://images.unsplash.com/photo-1464366400600-71ebb90ffbd4?auto=format&fit=crop&w=600&q=80" 
                 alt="Golden Hour" 
                 className="w-32 sm:w-56 h-auto rounded-3xl -rotate-12 drop-shadow-xl"
               />
@@ -105,6 +105,14 @@ export const Hero = () => {
               className="px-12 py-6 rounded-full text-xl font-black bg-slate-900 text-white shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all uppercase tracking-widest"
             >
               Become a Vendor
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05, translateY: -4 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('https://www.zeffy.com/en-US/ticketing/blackberry-festival-vendor-sign-up', '_blank')}
+              className="px-12 py-6 rounded-full text-xl font-black bg-rose-600 text-white shadow-2xl hover:shadow-[0_20px_50px_rgba(225,29,72,0.3)] transition-all uppercase tracking-widest"
+            >
+              Support Scholarships
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05, translateY: -4 }}
